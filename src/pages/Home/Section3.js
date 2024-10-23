@@ -13,7 +13,7 @@ export default function Section3() {
             Choose just the service you need, or build an all-inclusive package.
           </h4>
         </div>
-        <div className="flex flex-wrap gap-6">
+        <div className="flex gap-6">
           {servicesData.map((service, index) => {
             return (
               <div

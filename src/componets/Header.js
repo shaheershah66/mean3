@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <div className="Header h-[122px] w-full text-white bg-transparent fixed z-10 top-0 left-0">
-      <div className="header-bg absolute top-0 left-0 w-full bg-gradient-to-t from-transparent to-black/[.6] -z-10">
+      <div className="header-bg absolute top-0 left-0 w-full bg-gradient-to-t from-transparent to-black/[.7] -z-10">
         <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto p-[15px]">
           <div className="header-first w-full flex items-center h-[46px] text-xs">
             <div className="header-inner-first-icons">
