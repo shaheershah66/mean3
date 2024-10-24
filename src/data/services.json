@@ -1,77 +1,76 @@
 [
-    {   
-        "title": "web / app development",
-        "image": "web-logo.png",
-        "links": [
-            {
-                "linkName": "web development",
-                "link": "#"
-            },
-            {
-                "linkName": "mobile development",
-                "link": "#"
-            }
-        ]
-    },
+  {
+    "title": "web / app development",
+    "image": "web-logo.png",
+    "links": [
+      {
+        "linkName": "web development",
+        "link": "#"
+      },
+      {
+        "linkName": "mobile development",
+        "link": "#"
+      }
+    ]
+  },
 
-    {  
-        "title": "e-commerce development",
-        "image": "e-commerce-logo.png",
-        "links": [
-            {
-                "linkName": "shopify",
-                "link": "#"
-            },
-            {
-                "linkName": "mobile magneto",
-                "link": "#"
-            }
-        ]
-    },
+  {
+    "title": "e-commerce development",
+    "image": "e-commerce-logo.png",
+    "links": [
+      {
+        "linkName": "shopify",
+        "link": "#"
+      },
+      {
+        "linkName": "mobile magneto",
+        "link": "#"
+      }
+    ]
+  },
 
-    {  
-        "title": "graphic designing service",
-        "image": "mob-logo.png",
-        "links": [
-            {
-                "linkName": "logo and branding",
-                "link": "#"
-            },
-            {
-                "linkName": "print design and service",
-                "link": "#"
-            }
-        ]
-    },
+  {
+    "title": "graphic designing service",
+    "image": "mob-logo.png",
+    "links": [
+      {
+        "linkName": "logo and branding",
+        "link": "#"
+      },
+      {
+        "linkName": "print design and service",
+        "link": "#"
+      }
+    ]
+  },
 
-    {  
-        "title": "staff augmentation",
-        "image": "staff-logo.png",
-        "links": [
-            {
-                "linkName": "staff augmentation",
-                "link": "#"
-            },
-            {
-                "linkName": "project outsourcing",
-                "link": "#"
-            }
-        ]
-    },
+  {
+    "title": "staff augmentation",
+    "image": "staff-logo.png",
+    "links": [
+      {
+        "linkName": "staff augmentation",
+        "link": "#"
+      },
+      {
+        "linkName": "project outsourcing",
+        "link": "#"
+      }
+    ]
+  },
 
-    {  
-        "title": "digital marketing",
-        "image": "digital-logo.png",
-        "links": [
-            {
-                "linkName": "performance marketing",
-                "link": "#"
-            },
-            {
-                "linkName": "tiktok marketing",
-                "link": "#"
-            }
-        ]
-    }
+  {
+    "title": "digital marketing",
+    "image": "digital-logo.png",
+    "links": [
+      {
+        "linkName": "performance marketing",
+        "link": "#"
+      },
+      {
+        "linkName": "tiktok marketing",
+        "link": "#"
+      }
+    ]
+  }
 ]
-

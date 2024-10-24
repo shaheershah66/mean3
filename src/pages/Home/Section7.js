@@ -6,7 +6,6 @@ export default function Section7() {
   const bgImage = {
     backgroundImage: "url('bg-reviews.jpg')",
   };
-
   const sliderImages = [
     "andriod-logo.png",
     "unity-logo.png",
@@ -17,7 +16,6 @@ export default function Section7() {
     "apple-logo.png",
     "magento-logo.png",
   ];
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -34,7 +32,7 @@ export default function Section7() {
 
   return (
     <div
-      className="Section7 w-full text-white pt-[35px] pb-[70px] h-screen bg-cover bg-center bg-fixed"
+      className="Section7 w-full text-white pt-[35px] pb-[40px] h-screen bg-cover bg-center bg-fixed"
       style={bgImage}
     >
       <div className="section7-container xl:w-[1170px] mx-auto px-[15px]">
@@ -58,9 +56,9 @@ export default function Section7() {
 
         <div className="w-full h-[1px] bg-white opacity-20 mt-[50px] mb-16"></div>
 
-        <div className="w-full flex">
+        <div className="w-full flex p-2">
           <div className="w-[20%]">
-            <div className="text-lg opacity-60 relative after:content-[''] after:absolute after:left-0 after:top-[35px] after:border-solid after:border-[2px] after:w-1/3 after:border-white after:bg-white">
+            <div className="text-lg opacity-60 relative after:content-[''] after:absolute after:left-0 after:top-[35px] after:border-solid after:border-[2px] after:w-[50px] after:border-white after:bg-white">
               TECHNOLOGIES
             </div>
           </div>
@@ -70,10 +68,10 @@ export default function Section7() {
               return (
                 <div
                   className="w-[25%] animate-slide-up"
-                  key={`${url}-${activeIndex}`} 
+                  key={`${url}-${activeIndex}`}
                 >
                   <a href="#">
-                    <img className="w-full h-auto object-contain" src={url}/>
+                    <img className="w-full h-auto object-contain" src={url} />
                   </a>
                 </div>
               );

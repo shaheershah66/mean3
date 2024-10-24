@@ -34,9 +34,7 @@ export default function Section5() {
             />
           </div>
           <div className="flex flex-col text-left">
-            <h3 className="mb-[15px] text-3xl font-bold">
-              INSTANT RESULTS
-            </h3>
+            <h3 className="mb-[15px] text-3xl font-bold">INSTANT RESULTS</h3>
             <p>
               Completely predominate backend functionalities whereas
               professional convergence. Enthusiastically deploy multimedia based
@@ -48,4 +46,3 @@ export default function Section5() {
     </div>
   );
 }
-
