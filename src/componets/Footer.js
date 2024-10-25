@@ -4,7 +4,7 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 export default function Footer() {
   const [footerData, setFooterData] = useState(footerJson);
-  console.log(footerJson);
+
   return (
     <div className="Footer w-full bg-[#2F2F2F] text-white p-5">
       <div className="section7-container xl:w-[1170px] mx-auto px-[15px]">
@@ -105,11 +105,14 @@ export default function Footer() {
           <div className="bg-[#484848] h-[5px] w-full mt-4"></div>
           <div className="w-full flex justify-between py-7">
             <p className="text-[#8b8c8d]">
-              © 2024 All rights reserved. <a className="text-white" href="#">Mean3 Pvt Ltd</a>
+              © 2024 All rights reserved.{" "}
+              <a className="text-white" href="#">
+                Mean3 Pvt Ltd
+              </a>
             </p>
             <div className="flex items-center">
               <p className="text-[#8b8c8d] mr-1">GET SOCIAL</p>
-              <SocialMediaIcons/>
+              <SocialMediaIcons />
             </div>
           </div>
         </div>
