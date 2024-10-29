@@ -4,7 +4,7 @@ export default function Section2() {
   return (
     <div className="Section2 w-full pb-[35px]">
       <div className="section2-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
-        <div className="flex w-full bg-red-800 text-white p-[35px] items-center -mt-10 rounded-md">
+        <div className="flex w-full relative bg-[#CD2122] text-white p-[35px] items-center -mt-10 rounded-md after:absolute after:block after:rounded after:bg-[#CD2122] after:skew-y-[1.5deg] after:-z-10 after:w-full after:h-full after:left-0 after:top-[-6px] before:content-[''] before:absolute before:block before:rounded before:right-[5%] before:top-[-20px] before:-z-10 before:bg-black/20 before:w-[90%] before:h-[30%] before:-skew-y-2">
           <div className="flex flex-col w-[75%]">
             <h4 className="my-[10px] text-2xl">
               We provide all kinds of <strong>IT Solutions</strong> by

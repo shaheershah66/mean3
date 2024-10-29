@@ -1,6 +1,7 @@
 import { useState } from "react";
 import footerJson from "../data/footer.json";
 import SocialMediaIcons from "./SocialMediaIcons";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [footerData, setFooterData] = useState(footerJson);
@@ -11,27 +12,27 @@ export default function Footer() {
         <div className="footer-top flex w-full">
           <div className="offices w-1/4 px-4">
             <div className="logo-container mb-[30px]">
-              <a src="#">
+              <Link to="#">
                 <img src="mean3-logo.png" width={125} height={125}></img>
-              </a>
+              </Link>
             </div>
             <div>
               <h5 className="my-2 text-[#d5d5d5]">
                 <strong>Usa Office</strong>
               </h5>
               <h5 className="my-2">
-                <a href="#">
+                <Link to="#">
                   447 Broadway, 2nd Floor Suite #670, New York, New York 10013,
                   United States
-                </a>
+                </Link>
               </h5>
               <h5 className="-mt-2 mb-2">
-                <a href="#">info@mean3.com</a>
+                <Link to="#">info@mean3.com</Link>
               </h5>
               <h5 className="-mt-2 mb-2">
-                <a href="#" className="">
+                <Link to="#">
                   +1 (832) 278-2928
-                </a>
+                </Link>
               </h5>
             </div>
             <hr className="my-5"></hr>
@@ -40,19 +41,19 @@ export default function Footer() {
                 <strong>Pak Office</strong>
               </h5>
               <h5 className="my-2">
-                <a href="#">
+                <Link to="#">
                   2nd floor, 48-B Miran Mohammed Shah Rd, Mohammad Ali Society
                   (Machs), Karachi.
-                </a>
+                </Link>
               </h5>
               <h5 className="-mt-2 mb-2">
-                <a href="#">info@mean3.com</a>
+                <Link to="#">info@mean3.com</Link>
               </h5>
               <h5 className="-mt-2 mb-2">
-                <a href="#">+923343257767</a>
+                <Link to="#">+923343257767</Link>
               </h5>
               <h5 className="-mt-2 mb-2">
-                <a href="#">+923314016473</a>
+                <Link to="#">+923314016473</Link>
               </h5>
             </div>
           </div>
@@ -67,9 +68,9 @@ export default function Footer() {
                   <ul>
                     {item.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
-                        <a href={link.url} className="pb-1 capitalize block">
+                        <Link to={link.url} className="pb-1 capitalize block">
                           {link.title}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -106,9 +107,9 @@ export default function Footer() {
           <div className="w-full flex justify-between py-7">
             <p className="text-[#8b8c8d]">
               © 2024 All rights reserved.{" "}
-              <a className="text-white" href="#">
+              <Link className="text-white" to="/">
                 Mean3 Pvt Ltd
-              </a>
+              </Link>
             </p>
             <div className="flex items-center">
               <p className="text-[#8b8c8d] mr-1">GET SOCIAL</p>

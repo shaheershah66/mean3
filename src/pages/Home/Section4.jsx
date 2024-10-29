@@ -16,8 +16,8 @@ export default function Section4() {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: "linear",
-    nextArrow: <SliderBtn direction={"next"} />,
-    prevArrow: <SliderBtn direction={"prev"} />,
+    nextArrow: <SliderBtn direction="next" position={{ right: "20px", opacity: "1"}} />,
+    prevArrow: <SliderBtn direction="prev" position={{ left: "20px", opacity: "1"}} />,
   };
 
   return (
@@ -38,21 +38,16 @@ export default function Section4() {
             {sliderData.map((item, index) => {
               return (
                 <div key={index}>
-                  {" "}
-                  {/* Added key prop */}
                   <a
                     className="cursor-pointer inline-block px-4"
                     href={item.link}
                   >
-                    {" "}
-                    {/* Changed src to href */}
                     <img
                       className="inline-block w-full object-cover"
                       height={100}
                       src={item.image}
                       alt={item.title}
-                    />{" "}
-                    {/* Added alt attribute */}
+                    />
                     <p className="text-lg leading-5 mt-[10px]">
                       <strong>{item.title}</strong>
                     </p>

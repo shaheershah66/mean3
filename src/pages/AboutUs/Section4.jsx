@@ -8,7 +8,7 @@ export default function Section4() {
           <h1 className="text-[34px] font-bold text-[#DA2128] pb-2">
             Our Mission
           </h1>
-          <p className="pb-[3%]">
+          <p className="pb-[3%] mx-auto w-[95%]">
             Our mission is to empower businesses worldwide to reach their full
             potential by providing exceptional IT, E-commerce solutions, and
             digital services. We are committed to creating cutting-edge
@@ -24,7 +24,7 @@ export default function Section4() {
           <h1 className="text-[34px] font-bold text-[#DA2128] pb-2">
             Our Vision
           </h1>
-          <p className="pb-[3%]">
+          <p className="pb-[3%] mx-auto w-[95%]">
             Our vision is to build long-lasting client partnerships by providing
             a comprehensive and integrated solution to fuel the success of their
             businesses.

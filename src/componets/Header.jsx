@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { Link, NavLink } from "react-router-dom";
 
@@ -34,11 +34,34 @@ export default function Header() {
       url: "/contact-us",
     },
   ];
+  
+  const [show, setShow] = useState(true);
+
+  const controlNavbar = () => {
+    if (window.scrollY === 0) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
+
   return (
     <div className="Header h-[122px] w-full text-white bg-transparent fixed z-20 top-0 left-0">
-      <div className="header-bg absolute top-0 left-0 w-full bg-gradient-to-t from-transparent to-black/[.7] -z-10">
+      <div className="header-bg absolute top-0 left-0 w-full h-[100%] bg-gradient-to-t from-transparent to-black/[.7] -z-10">
         <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
-          <div className="header-first w-full flex items-center h-[46px] text-xs">
+          <div
+            className={`header-first flex w-full items-center h-[46px] text-xs overflow-hidden transition-all ease-in-out ${
+              !show ? "h-[0]" : ""
+            }`}
+          >
             <div className="header-inner-first-icons">
               <SocialMediaIcons />
             </div>
@@ -46,7 +69,7 @@ export default function Header() {
             <div className="header-first-contact">
               <div className="ml-4">
                 QUESTIONS? CALL:{" "}
-                <a href="+1(832)278-2928" className="font-bold">
+                <a href="tel:+1(832)278-2928" className="font-bold">
                   +1 (832) 278-2928
                 </a>
               </div>
@@ -58,7 +81,7 @@ export default function Header() {
           <div className="header-last w-full flex items-center h-auto justify-between">
             <div className="flex items-center">
               <div className="logo-container relative group">
-                <a href="#">
+                <Link to="/">
                   <img
                     className=""
                     src="mean3-logo.png"
@@ -67,10 +90,10 @@ export default function Header() {
                     alt="Mean3 Logo"
                   />
                   <img
-                    className="absolute left-0 top-full opacity-0"
+                    className="absolute left-0 top-[20%] opacity-0 cursor-pointer"
                     src="mean3-logo.png"
                   ></img>
-                </a>
+                </Link>
                 {/* hover card */}
                 <div className="absolute top-full left-0 w-[440px] shadow-2xl bg-[#cd2122] z-10 pt-[30px] pb-[25px] px-5 mt-[10px] text-xs leading-5 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none">
                   <div className="flex">
@@ -91,7 +114,7 @@ export default function Header() {
                       <p className="mb-5">
                         <strong>+1 (832) 278-2928</strong> <br />
                         Email:{" "}
-                        <a href="#" className="pointer-events-auto">
+                        <a href="mailto:info@mean3.com" className="hover:pointer-events-auto">
                           info@mean3.com
                         </a>
                       </p>
@@ -131,13 +154,13 @@ export default function Header() {
             </div>
 
             <div className="btn-container">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="px-[10px] py-[5px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col border-none"
               >
                 <strong className="text-[17px]">Free</strong>
                 <span>Quote</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
