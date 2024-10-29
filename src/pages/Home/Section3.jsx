@@ -5,22 +5,22 @@ export default function Section3() {
   const [servicesData, setServicesData] = useState(servicesJson);
 
   return (
-    <div className="Section3 w-full py-[35px] shadow-">
-      <div className="section3-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px] text-red-800">
+    <div className="Section3 w-full py-[35px]">
+      <div className="section3-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px] text-red-800">
         <div className="py-[35px] text-center">
-          <h3 className="text-4xl font-bold mb-2">OUR SERVICES</h3>
-          <h4 className="text-xl text-black mb-2">
+          <h3 className="mb-2 text-4xl font-bold">OUR SERVICES</h3>
+          <h4 className="mb-2 text-xl text-black">
             Choose just the service you need, or build an all-inclusive package.
           </h4>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap gap-5 mx-auto lg:flex-nowrap">
           {servicesData.map((service, index) => {
             return (
               <div
                 key={index}
-                className="relative p-[14px] hover:z-10 bg-[#eeeeee] w-[20%] rounded-md cursor-pointer group transform transition-all duration-300 hover:bg-white hover:shadow-2xl hover:scale-105"
+                className="relative hover:z-10 bg-[#eeeeee]  text-center w-full  md:text-left md:w-[48.6%] p-[30px] lg:p-[14px] lg:w-[20%] rounded-md cursor-pointer group transform transition-all duration-300 hover:bg-white hover:shadow-2xl hover:scale-105"
               >
-                <div className="logo-container">
+                <div className="inline-block text-center logo-container">
                   <img
                     src={service.image}
                     width={63}
@@ -28,10 +28,10 @@ export default function Section3() {
                     alt={service.title}
                   />
                 </div>
-                <h3 className="py-[15px] text-base text-black capitalize">
+                <h3 className="py-[15px] text-[22px] lg:text-base text-black capitalize">
                   {service.title}
                 </h3>
-                <ul className="absolute left-0 right-0 bg-white z-10 hidden group-hover:block rounded-b-md shadow-lg px-[14px]">
+                <ul className="absolute left-0 right-0 bg-white z-10 hidden group-hover:block rounded-b-md shadow-lg p-[30px] lg:p-[14px]">
                   {service.links.map((link, index) => {
                     return (
                       <li

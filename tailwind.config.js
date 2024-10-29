@@ -2,6 +2,21 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      'xs': '481px',
+
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '992px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1200px',
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       boxShadow: {
         "line": '0px 4px 4px 0px #00000040',
@@ -26,4 +41,5 @@ module.exports = {
     },
   },
   plugins: [],
+  
 };

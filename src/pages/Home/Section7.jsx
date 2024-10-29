@@ -32,10 +32,10 @@ export default function Section7() {
 
   return (
     <div
-      className="Section7 w-full text-white pt-[35px] pb-[40px] h-screen bg-cover bg-center bg-fixed"
+      className="Section7 w-full text-white pt-[35px] pb-[40px]  bg-cover bg-center bg-fixed"
       style={bgImage}
     >
-      <div className="section7-container xl:w-[1170px] mx-auto px-[15px]">
+      <div className="section7-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         <div className="flex items-center w-full flex-col mt-[35px] mb-[60px]">
           <h3 className="text-4xl font-bold mb-[10px] text-white text-center">
             CLIENT TESTIMONIALS
@@ -43,12 +43,12 @@ export default function Section7() {
           <div className="w-[40px] h-[3px] bg-white mb-[20px]"></div>
         </div>
 
-        <div className="flex gap-14 text-base w-full">
+        <div className="flex flex-wrap w-full text-base lg:flex-nowrap gap-14">
           {reviewsData.map((item, index) => {
             return (
-              <div className="w-[20%]" key={index}>
+              <div className="w-full md:w-[46%] lg:w-[20%]" key={index}>
                 <p className="italic">{item.review}</p>
-                <h4 className="mt-14 font-bold">{item.name}</h4>
+                <h4 className="font-bold mt-14">{item.name}</h4>
               </div>
             );
           })}
@@ -56,14 +56,14 @@ export default function Section7() {
 
         <div className="w-full h-[1px] bg-white opacity-20 mt-[50px] mb-16"></div>
 
-        <div className="w-full flex p-2">
+        <div className="flex flex-col w-full p-2 lg:flex-row">
           <div className="w-[20%]">
             <div className="text-lg opacity-60 relative after:content-[''] after:absolute after:left-0 after:top-[35px] after:border-solid after:border-[2px] after:w-[50px] after:border-white after:bg-white">
               TECHNOLOGIES
             </div>
           </div>
 
-          <div className="w-[80%] flex overflow-hidden">
+          <div className=" w-full mt-7 lg:mt-0 lg:w-[80%] flex overflow-hidden">
             {activeSliderImages.map((url, index) => {
               return (
                 <div
@@ -71,7 +71,7 @@ export default function Section7() {
                   key={`${url}-${activeIndex}`}
                 >
                   <a href="#">
-                    <img className="w-full h-auto object-contain" src={url} />
+                    <img className="object-contain w-full h-auto" src={url} />
                   </a>
                 </div>
               );

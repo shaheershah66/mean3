@@ -78,9 +78,9 @@ export default function Header() {
 
           <div className="divider opacity-20 bg-white w-full h-[1px]"></div>
 
-          <div className="header-last w-full flex items-center h-auto justify-between">
+          <div className="flex items-center justify-between w-full h-auto header-last">
             <div className="flex items-center">
-              <div className="logo-container relative group">
+              <div className="relative logo-container group">
                 <Link to="/">
                   <img
                     className=""
@@ -97,8 +97,8 @@ export default function Header() {
                 {/* hover card */}
                 <div className="absolute top-full left-0 w-[440px] shadow-2xl bg-[#cd2122] z-10 pt-[30px] pb-[25px] px-5 mt-[10px] text-xs leading-5 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none">
                   <div className="flex">
-                    <div className="px-4 w-1/2">
-                      <div className="logo-container flex flex-col items-center">
+                    <div className="w-1/2 px-4">
+                      <div className="flex flex-col items-center logo-container">
                         <img
                           src="mean3-black-logo.png"
                           width={150}
@@ -110,11 +110,11 @@ export default function Header() {
                         </p>
                       </div>
                     </div>
-                    <div className="px-4 w-1/2">
+                    <div className="w-1/2 px-4">
                       <p className="mb-5">
                         <strong>+1 (832) 278-2928</strong> <br />
                         Email:{" "}
-                        <a href="mailto:info@mean3.com" className="hover:pointer-events-auto">
+                        <a href="mailto:info@mean3.com">
                           info@mean3.com
                         </a>
                       </p>

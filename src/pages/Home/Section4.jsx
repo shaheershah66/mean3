@@ -18,14 +18,35 @@ export default function Section4() {
     cssEase: "linear",
     nextArrow: <SliderBtn direction="next" position={{ right: "20px", opacity: "1"}} />,
     prevArrow: <SliderBtn direction="prev" position={{ left: "20px", opacity: "1"}} />,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+    ]
   };
 
   return (
     <div className="Section4 w-full py-[35px]">
-      <div className="section3-container xl:w-[1170px] mx-auto px-[15px]">
+      <div className="section3-container w-full xl:w-[1170px] mx-auto px-[15px]">
         <div className="text-center">
-          <h3 className="text-4xl font-bold mb-2 text-red-800">News</h3>
-          <h4 className="text-xl text-black mb-2 text-center">
+          <h3 className="mb-2 text-4xl font-bold text-red-800">News</h3>
+          <h4 className="mb-2 text-xl text-center text-black">
             We’re proud to be consistently recognized as the fastest-growing
             technology company, earning a variety of awards and recognition in
             several key areas.
@@ -39,11 +60,11 @@ export default function Section4() {
               return (
                 <div key={index}>
                   <a
-                    className="cursor-pointer inline-block px-4"
+                    className="inline-block px-4 cursor-pointer"
                     href={item.link}
                   >
                     <img
-                      className="inline-block w-full object-cover"
+                      className="inline-block object-cover w-full"
                       height={100}
                       src={item.image}
                       alt={item.title}
