@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Section1() {
   return (
-    <div className="w-full h-screen md:h-[70vh] Section1">
+    <div className="w-full h-[65vh] Section1">
       <div className="relative w-full h-full section1-container">
         <img
-          className="absolute top-0 left-0 items-center block object-cover w-full h-full object-center-top -z-10"
-          src="mean3-bg-picture.jpg"
+          className="absolute top-0 left-0 items-center block object-cover object-center w-full h-full -z-10"
+          src="web-banner-About-Us-2.jpg"
         ></img>
         <div className="text-white top-auto bottom-[35px] mb-0 mx-auto w-[95%] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[750px]  md:mt-0 lg:w-[970px] lg:bottom-auto lg:top-1/2 lg:mt-[70px] xl:w-[1170px] ">
           <div className="w-full">

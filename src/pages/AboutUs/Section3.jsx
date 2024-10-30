@@ -1,44 +1,32 @@
 import React from "react";
 
 export default function Section3() {
+  const mean = [
+    { logo: "m-logo.png", img: "monogoDB-logo.png" },
+    { logo: "e-logo.png", img: "express-logo.png" },
+    { logo: "a-logo.png", img: "angular-logo.png" },
+    { logo: "n-logo.png", img: "nodejs-logo.png" },
+  ] 
+  
   return (
-    <div className="Section3 w-full">
-      <div className="section3-container w-full text-center">
-        <h1 className="text-[34px] font-bold mb-2">
+    <div className="w-full Section3">
+      <div className="w-full text-center section3-container">
+        <h1 className="text-[26px] md:text-[34px] font-bold mb-5 md:mb-2">
           What does <span className="text-[#DA2128]">Mean</span> stands for?
         </h1>
-        <p className="pb-[3%]">
+        <p className="mb-8 font-sans text-xs md:text-sm">
           Mean3’s name is derived from a technology stack called ‘MeanStack’
           Which means
         </p>
-        <div className="flex justify-center items-center gap-14">
-          <div className="mean">
-            <div className="img-cont w-[142px] h-[140px] shadow-box">
-              <img src="m-logo.png" className="w-full h-full"></img>
+        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-14">
+          {mean.map((item) => (
+            <div className="flex flex-col items-center mean">
+              <div className="img-cont shadow-box w-[70px] h-[70px] xxs:h-[100px] xxs:w-[100px] md:w-[142px] md:h-[140px]">
+                <img src={item.logo} className="object-contain w-full h-full" alt={item.img}></img>
+              </div>
+              <img className="w-[70px] h-[45px] md:h-[56px] object-contain xxs:w-[100px] md:w-[142px]" src={item.img} alt={item.img}></img>
             </div>
-            <img src="monogoDB-logo.png"></img>
-          </div>
-
-          <div className="mean">
-            <div className="img-cont w-[142px] h-[140px] shadow-box">
-              <img src="e-logo.png" className="w-full h-full"></img>
-            </div>
-            <img src="express-logo.png"></img>
-          </div>
-
-          <div className="mean">
-            <div className="img-cont w-[142px] h-[140px] shadow-box">
-              <img src="a-logo.png" className="w-full h-full"></img>
-            </div>
-            <img className="inline-block mt-[7px]" src="angular-logo.png"></img>
-          </div>
-
-          <div className="mean">
-            <div className="img-cont w-[142px] h-[140px] shadow-box">
-              <img src="n-logo.png" className="w-full h-full"></img>
-            </div>
-            <img className="inline-block mt-[3px]" src="nodejs-logo.png"></img>
-          </div>
+          ))}
         </div>
       </div>
     </div>

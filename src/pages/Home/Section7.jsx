@@ -35,7 +35,7 @@ export default function Section7() {
       className="Section7 w-full text-white pt-[35px] pb-[40px]  bg-cover bg-center bg-fixed"
       style={bgImage}
     >
-      <div className="section7-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
+      <div className="section7-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         <div className="flex items-center w-full flex-col mt-[35px] mb-[60px]">
           <h3 className="text-4xl font-bold mb-[10px] text-white text-center">
             CLIENT TESTIMONIALS

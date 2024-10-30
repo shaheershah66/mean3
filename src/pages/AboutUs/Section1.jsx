@@ -6,14 +6,14 @@ export default function Section1() {
   };
   return (
     <div
-      className="Section1 w-full h-[550px] bg-cover bg-no-repeat"
+      className="Section1 w-full h-[290px] md:h-[550px] bg-cover bg-no-repeat"
       style={bgImage}
     >
-      <div className="section1-container w-full h-full px-5 text-center flex items-center justify-center">
+      <div className="flex items-center justify-center w-full h-full px-5 text-center section1-container">
         <div className="flex flex-col items-center text-white">
-          <h1 className="text-7xl font-bold pb-2">About Mean3</h1>
-          <hr className="mt-5 mb-3 w-1/4"></hr>
-          <p className="text-lg font-bold">
+          <h1 className=" text-[32px] xl:text-7xl md:text-[45px] font-bold">About Mean3</h1>
+          <hr className="w-1/4 mt-5 mb-3 md:mt-10 xl:mt-5"></hr>
+          <p className="text-sm font-bold md:text-lg">
             Mean3 Has A Technological Mind And A Digital Heart
           </p>
         </div>

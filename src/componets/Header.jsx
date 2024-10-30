@@ -59,7 +59,7 @@ export default function Header() {
         <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
           <div
             className={`header-first flex w-full items-center h-[46px] text-xs overflow-hidden transition-all ease-in-out ${
-              !show ? "h-[0]" : ""
+              show ? "" : "h-0"
             }`}
           >
             <div className="header-inner-first-icons">

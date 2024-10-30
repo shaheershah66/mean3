@@ -42,7 +42,7 @@ export default function Section6() {
             <div key={index}>
               <div className="w-full xl:w-[1200px] h-[190px] md:h-auto mx-auto">
                 <video
-                  className="w-full h-auto"
+                  className="object-cover w-full h-full"
                   src={item.url}
                   controls
                   autoPlay
