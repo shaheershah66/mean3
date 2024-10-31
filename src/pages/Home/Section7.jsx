@@ -37,8 +37,8 @@ export default function Section7() {
     >
       <div className="section7-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         <div className="flex items-center w-full flex-col mt-[35px] mb-[60px]">
-          <h3 className="text-4xl font-bold mb-[10px] text-white text-center">
-            CLIENT TESTIMONIALS
+          <h3 className="text-2xl md:text-4xl font-bold mb-[10px] text-white text-center">
+            OUR PARTNERS & REVIEWS
           </h3>
           <div className="w-[40px] h-[3px] bg-white mb-[20px]"></div>
         </div>

@@ -8,8 +8,8 @@ export default function Section3() {
     <div className="Section3 w-full py-[35px]">
       <div className="section3-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px] text-red-800">
         <div className="py-[35px] text-center">
-          <h3 className="mb-2 text-4xl font-bold">OUR SERVICES</h3>
-          <h4 className="mb-2 text-xl text-black">
+          <h3 className="mb-2 text-2xl font-bold md:text-4xl">OUR SERVICES</h3>
+          <h4 className="mb-2 text-lg text-black">
             Choose just the service you need, or build an all-inclusive package.
           </h4>
         </div>

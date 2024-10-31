@@ -45,8 +45,8 @@ export default function Section4() {
     <div className="Section4 w-full py-[35px]">
       <div className="section3-container w-full xl:w-[1170px] mx-auto px-[15px]">
         <div className="text-center">
-          <h3 className="mb-2 text-4xl font-bold text-red-800">News</h3>
-          <h4 className="mb-2 text-xl text-center text-black">
+          <h3 className="mb-2 text-2xl font-bold text-red-800 md:text-4xl">News</h3>
+          <h4 className="mb-2 text-base text-center text-black">
             We’re proud to be consistently recognized as the fastest-growing
             technology company, earning a variety of awards and recognition in
             several key areas.

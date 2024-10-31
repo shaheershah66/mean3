@@ -8,7 +8,7 @@ import Section6 from "./Section6";
 
 export default function AboutUs() {
   return (
-    <div className="About-us">
+    <div className="leading-7 About-us">
       <Section1 />
       <Section2 />
       <Section3 />

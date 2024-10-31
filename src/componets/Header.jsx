@@ -15,8 +15,18 @@ export default function Header() {
     },
 
     {
-      title: "our clients",
-      url: "/our-clients",
+      title: "portfolio",
+      children: [
+        {
+          title: "clients",
+          url: "/clients",
+        },
+
+        {
+          title: "clients testimonials",
+          url: "/clients-testimonials",
+        },
+      ],
     },
 
     {
@@ -34,7 +44,7 @@ export default function Header() {
       url: "/contact-us",
     },
   ];
-  
+
   const [show, setShow] = useState(true);
 
   const controlNavbar = () => {
@@ -114,9 +124,7 @@ export default function Header() {
                       <p className="mb-5">
                         <strong>+1 (832) 278-2928</strong> <br />
                         Email:{" "}
-                        <a href="mailto:info@mean3.com">
-                          info@mean3.com
-                        </a>
+                        <a href="mailto:info@mean3.com">info@mean3.com</a>
                       </p>
                       <p className="mb-5">
                         Mean3 Software Solutions <br />
@@ -135,16 +143,22 @@ export default function Header() {
                   {navLinks.map((item, index) => {
                     return (
                       <li>
-                        <NavLink
-                          to={item.url}
-                          className={({ isActive }) =>
-                            `uppercase py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open ${
-                              isActive ? "bg-[#cd2122]" : ""
-                            }`
-                          }
-                        >
-                          {item.title}
-                        </NavLink>
+                        {!item.hasOwnProperty("children") ? (
+                          <NavLink
+                            to={item.url}
+                            className={({ isActive }) =>
+                              `uppercase py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open ${
+                                isActive ? "bg-[#cd2122]" : ""
+                              }`
+                            }
+                          >
+                            {item.title}
+                          </NavLink>
+                        ) : (
+                          <span className="uppercase py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open">
+                            {item.title}
+                          </span>
+                        )}
                       </li>
                     );
                   })}

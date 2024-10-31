@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <div className="Footer w-full bg-[#2F2F2F] text-white py-5">
-      <div className="section7-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
+      <div className="section7-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         <div className="flex flex-col w-full md:flex-row footer-top">
           <div className="w-full md:px-4 md:w-1/4 offices">
             <div className="logo-container mb-[30px]">
@@ -79,30 +79,39 @@ export default function Footer() {
             );
           })}
 
-          <div className="flex flex-wrap self-start w-full gap-2 mt-5 md:px-4 md:w-1/4 logos">
-            <div className="md:w-[47%] lg:w-[48%]">
-              <img className="bg-white" src="shopify-experts-logo.png"></img>
+          <div className="w-full mt-5 md:px-4 md:w-1/4 logos">
+            <div className="flex w-full gap-2 mt-2">
+              <div className="w-[18%] md:w-[47%] lg:w-[48%]">
+                <img className="w-full bg-white" src="shopify-experts-logo.png"></img>
+              </div>
+
+              <div className="w-[18%] md:w-[47%] lg:w-[48%]">
+                <img className="w-full bg-white" src="secp-logo.jpg"></img>
+              </div>
             </div>
 
-            <div className="md:w-[47%] lg:w-[48%]">
-              <img className="bg-white" src="secp-logo.jpg"></img>
-            </div>
+            <div className="flex gap-2 mt-2">
+              <div className="w-[18%] md:w-[47%] lg:w-[48%]">
+                <img className="w-full bg-white" src="pasha-logo.jpg"></img>
+              </div>
 
-            <div className="md:w-[47%] lg:w-[48%]">
-              <img className="bg-white" src="pasha-logo.jpg"></img>
+              <div className="w-[18%] md:w-[47%] lg:w-[48%]">
+                <img className="w-full bg-white" src="go-awards-logo.png"></img>
+              </div>
             </div>
-
-            <div className="md:w-[47%] lg:w-[48%]">
-              <img className="bg-white" src="go-awards-logo.png"></img>
-            </div>
-
-            <div className="md:w-[47%] lg:w-[48%]">
-              <img className="bg-white" src="brand-of-the-logo.png"></img>
+           
+            <div className="flex gap-2 mt-2">
+              <div className="w-[18%] md:w-[47%] lg:w-[48%]">
+                <img className="w-full bg-white" src="brand-of-the-logo.png"></img>
+              </div>
+              <div className="w-[18%] md:w-[47%] lg:w-[48%]">
+                <img className="invisible w-full bg-white" src="brand-of-the-logo.png"></img>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="footer-bottom md:px-4 text-[13px]">
+        <div className="footer-bottom w-full md:px-4 text-[13px]">
           <div className="bg-[#484848] h-[5px] w-full mt-[28px]"></div>
           <div className="flex flex-col-reverse w-full md:justify-between md:flex-row py-7">
             <p className="text-[#8b8c8d] md:mt-0 mt-5">

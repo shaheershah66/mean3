@@ -34,7 +34,7 @@ export default function Section6() {
   return (
     <div className="Section6 w-full text-white pt-28 pb-[45px]">
       <div className="w-full section6-container">
-        <h3 className="text-4xl font-bold mb-10 text-[#da2128] text-center">
+        <h3 className="text-2xl md:text-4xl font-bold mb-10 text-[#da2128] text-center">
           CLIENT TESTIMONIALS
         </h3>
         <Slider {...settings}>

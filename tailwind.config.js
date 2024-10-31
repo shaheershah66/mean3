@@ -31,8 +31,9 @@ module.exports = {
       },
 
       boxShadow: {
-        "line": '0px 4px 4px 0px #00000040',
-        "box": "0px 0px 20px 0px #00000040"
+        "line": "0px 4px 4px 0px #00000040",
+        "box": "0px 0px 20px 0px #00000040",
+        "input-cont": "inset 1px 2px 0 rgba(0,0,0,.06)"
       },
 
       keyframes: {

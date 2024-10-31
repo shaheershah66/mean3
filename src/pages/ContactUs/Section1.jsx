@@ -1,9 +1,10 @@
 import React from "react";
+import Portfolio from "../../componets/Portfolio";
 
 export default function Section1() {
   return (
     <div className="w-full h-[65vh] Section1">
-      <div className="relative w-full h-full section1-container">
+      {/* <div className="relative w-full h-full section1-container">
         <img
           className="absolute top-0 left-0 items-center block object-cover object-center w-full h-full -z-10"
           src="web-banner-About-Us-2.jpg"
@@ -23,7 +24,8 @@ export default function Section1() {
             </h3>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Portfolio bgImage={"web-banner-About-Us-2.jpg"} objectPosition={"object-center"}/>
     </div>
   );
 }

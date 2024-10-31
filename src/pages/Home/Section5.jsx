@@ -16,7 +16,7 @@ export default function Section5() {
             </p>
           </div>
           <img
-            className="w-[200px] inline-block ml-3 self-end xs:self-start md:self-end lg:self-start"
+            className="w-[200px] inline-block xs:ml-3 self-end xs:self-start md:self-end lg:self-start"
             src="https://mean3.com/wp-content/uploads/2015/11/ico-world.svg"
             alt="World Icon"
           />
@@ -25,7 +25,7 @@ export default function Section5() {
         {/* Right Section */}
         <div className="w-full md:w-1/2 bg-[#D96061] py-[15%] md:py-[10%] px-[5%] text-left flex-col flex xs:flex-row md:flex-col lg:flex-row">
           <img
-            className="w-[200px] inline-block mr-3 self-start"
+            className="w-[200px] inline-block xs:mr-3 self-start"
             src="https://mean3.com/wp-content/uploads/2015/11/ico-results.svg"
             alt="Results Icon"
           />
