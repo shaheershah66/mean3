@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section1() {
   const bgImage = {
-    backgroundImage: "url('about-bg-img.webp')",
+    backgroundImage: "url('assets/about-bg-img.webp')",
   };
   return (
     <div

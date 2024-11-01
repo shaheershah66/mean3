@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 export default function Header() {
   const navLinks = [
@@ -18,7 +18,7 @@ export default function Header() {
       title: "portfolio",
       children: [
         {
-          title: "clients",
+          title: "our clients",
           url: "/clients",
         },
 
@@ -44,7 +44,7 @@ export default function Header() {
       url: "/contact-us",
     },
   ];
-
+  const location = useLocation();
   const [show, setShow] = useState(true);
 
   const controlNavbar = () => {
@@ -68,8 +68,8 @@ export default function Header() {
       <div className="header-bg absolute top-0 left-0 w-full h-[100%] bg-gradient-to-t from-transparent to-black/[.7] -z-10">
         <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
           <div
-            className={`header-first flex w-full items-center h-[46px] text-xs overflow-hidden transition-all ease-in-out ${
-              show ? "" : "h-0"
+            className={`header-first flex w-full items-center text-xs overflow-hidden transition-all ease-in-out ${
+              show ? "h-[46px]" : "h-0"
             }`}
           >
             <div className="header-inner-first-icons">
@@ -94,14 +94,14 @@ export default function Header() {
                 <Link to="/">
                   <img
                     className=""
-                    src="mean3-logo.png"
+                    src="assets/mean3-logo.png"
                     width={118}
                     height={70}
                     alt="Mean3 Logo"
                   />
                   <img
                     className="absolute left-0 top-[20%] opacity-0 cursor-pointer"
-                    src="mean3-logo.png"
+                    src="assets/mean3-logo.png"
                   ></img>
                 </Link>
                 {/* hover card */}
@@ -110,7 +110,7 @@ export default function Header() {
                     <div className="w-1/2 px-4">
                       <div className="flex flex-col items-center logo-container">
                         <img
-                          src="mean3-black-logo.png"
+                          src="assets/mean3-black-logo.png"
                           width={150}
                           height={150}
                           alt="Mean3 Black Logo"
@@ -140,23 +140,42 @@ export default function Header() {
               {/* navigation */}
               <nav className="ml-24">
                 <ul className="flex">
-                  {navLinks.map((item, index) => {
+                  {navLinks.map((parent) => {
+                    const hasChildren = parent.hasOwnProperty("children");
+                    const isActive = hasChildren && parent.children.some(child => child.url === location.pathname);
+
                     return (
                       <li>
-                        {!item.hasOwnProperty("children") ? (
+                        {!hasChildren ? (
                           <NavLink
-                            to={item.url}
+                            to={parent.url}
                             className={({ isActive }) =>
                               `uppercase py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open ${
                                 isActive ? "bg-[#cd2122]" : ""
                               }`
                             }
                           >
-                            {item.title}
+                            {parent.title}
                           </NavLink>
                         ) : (
-                          <span className="uppercase py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open">
-                            {item.title}
+                          <span className={`${isActive? "bg-[#cd2122]" : ""} uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}>
+                            {parent.title}
+                            <ul className="py-[6px] invisible group-hover:visible group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
+                              {
+                                parent.children.map((child) => {
+                                  return(
+                                    <li className="w-full">
+                                      <NavLink 
+                                        to={child.url}
+                                        className={({ isActive }) => `inline-block hover:text-[#323232] hover:bg-[rgba(0,0,0,.04)] ${isActive ? "text-[#323232] bg-[rgba(0,0,0,.04)]" : ""} w-full px-5 py-[10px] text-xs leading-[14px] border-b-[1px] border-solid border-b-[rgba(0,0,0,.03)] z-10`}
+                                      >
+                                        {child.title}
+                                      </NavLink>
+                                    </li>
+                                  )
+                                })
+                              } 
+                            </ul>
                           </span>
                         )}
                       </li>

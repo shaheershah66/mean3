@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import sliderImageJson from "../../data/sliderImage.json";
 import SliderBtn from "../../componets/SliderBtn";
@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Section4() {
-  const [sliderData, setSliderData] = useState(sliderImageJson);
+  const sliderData = sliderImageJson;
 
   var settings = {
     dots: false,

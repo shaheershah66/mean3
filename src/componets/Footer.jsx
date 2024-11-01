@@ -1,10 +1,9 @@
-import { useState } from "react";
 import footerJson from "../data/footer.json";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const [footerData, setFooterData] = useState(footerJson);
+  const footerData = footerJson;
 
   return (
     <div className="Footer w-full bg-[#2F2F2F] text-white py-5">
@@ -13,7 +12,7 @@ export default function Footer() {
           <div className="w-full md:px-4 md:w-1/4 offices">
             <div className="logo-container mb-[30px]">
               <Link to="#">
-                <img src="mean3-logo.png" width={125} height={125}></img>
+                <img src="assets/mean3-logo.png" width={125} height={125}></img>
               </Link>
             </div>
             <div>
@@ -82,30 +81,30 @@ export default function Footer() {
           <div className="w-full mt-5 md:px-4 md:w-1/4 logos">
             <div className="flex w-full gap-2 mt-2">
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full bg-white" src="shopify-experts-logo.png"></img>
+                <img className="w-full bg-white" src="assets/shopify-experts-logo.png"></img>
               </div>
 
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full bg-white" src="secp-logo.jpg"></img>
+                <img className="w-full bg-white" src="assets/secp-logo.jpg"></img>
               </div>
             </div>
 
             <div className="flex gap-2 mt-2">
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full bg-white" src="pasha-logo.jpg"></img>
+                <img className="w-full bg-white" src="assets/pasha-logo.jpg"></img>
               </div>
 
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full bg-white" src="go-awards-logo.png"></img>
+                <img className="w-full bg-white" src="assets/go-awards-logo.png"></img>
               </div>
             </div>
            
             <div className="flex gap-2 mt-2">
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full bg-white" src="brand-of-the-logo.png"></img>
+                <img className="w-full bg-white" src="assets/brand-of-the-logo.png"></img>
               </div>
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="invisible w-full bg-white" src="brand-of-the-logo.png"></img>
+                <img className="invisible w-full bg-white" src="assets/brand-of-the-logo.png"></img>
               </div>
             </div>
           </div>

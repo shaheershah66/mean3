@@ -1,8 +1,7 @@
-import { useState } from "react";
 import valuesJson from "../../data/values.json";
 
 export default function Section5() {
-  const [valuesData, setValuesData] = useState(valuesJson);
+  const valuesData = valuesJson;
   console.log(valuesData);
 
   return (

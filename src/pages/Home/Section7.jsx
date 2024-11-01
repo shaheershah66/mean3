@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 import reviewsJson from "../../data/reviews.json";
 
 export default function Section7() {
-  const [reviewsData, setReviewsData] = useState(reviewsJson);
+  const reviewsData = reviewsJson;
   const bgImage = {
-    backgroundImage: "url('bg-reviews.jpg')",
+    backgroundImage: "url('assets/bg-reviews.jpg')",
   };
   const sliderImages = [
-    "andriod-logo.png",
-    "unity-logo.png",
-    "apple-logo.png",
-    "magento-logo.png",
-    "andriod-logo.png",
-    "unity-logo.png",
-    "apple-logo.png",
-    "magento-logo.png",
+    "assets/andriod-logo.png",
+    "assets/unity-logo.png",
+    "assets/apple-logo.png",
+    "assets/magento-logo.png",
+    "assets/andriod-logo.png",
+    "assets/unity-logo.png",
+    "assets/apple-logo.png",
+    "assets/magento-logo.png",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function SliderBtn({ direction, onClick, position }) {
-  console.log(position);
   const btnStyles = {
     customArrow: {
       backgroundColor: "black",

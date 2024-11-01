@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Section3() {
   const mean = [
-    { logo: "m-logo.png", img: "monogoDB-logo.png" },
-    { logo: "e-logo.png", img: "express-logo.png" },
-    { logo: "a-logo.png", img: "angular-logo.png" },
-    { logo: "n-logo.png", img: "nodejs-logo.png" },
+    { logo: "assets/m-logo.png", img: "assets/monogoDB-logo.png" },
+    { logo: "assets/e-logo.png", img: "assets/express-logo.png" },
+    { logo: "assets/a-logo.png", img: "assets/angular-logo.png" },
+    { logo: "assets/n-logo.png", img: "assets/nodejs-logo.png" },
   ] 
   
   return (

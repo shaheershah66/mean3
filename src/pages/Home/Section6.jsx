@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Slider from "react-slick";
 import SliderBtn from "../../componets/SliderBtn"; // Ensure correct path
 import sliderVideoJson from "../../data/sliderVideo.json";
@@ -6,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Section6() {
-  const [sliderData] = useState(sliderVideoJson);
+  const sliderData = sliderVideoJson;
 
   const settings = {
     dots: false,
