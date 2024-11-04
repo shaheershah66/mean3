@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="w-full md:px-4 md:w-1/4 offices">
             <div className="logo-container mb-[30px]">
               <Link to="#">
-                <img src="/assets/mean3-logo.png" width={125} height={125} alt="Mean3 Logo"></img>
+                <img src="assets/mean3-logo.png" width={125} height={125} alt="Mean3 Logo"></img>
               </Link>
             </div>
             <div>
@@ -81,30 +81,30 @@ export default function Footer() {
           <div className="w-full mt-5 md:px-4 md:w-1/4 logos">
             <div className="flex w-full gap-2 mt-2">
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full text-black bg-white" src="/assets/shopify-experts-logo.png" alt="Achivements Logos"></img>
+                <img className="w-full text-black bg-white" src="assets/shopify-experts-logo.png" alt="Achivements Logos"></img>
               </div>
 
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full text-black bg-white" src="/assets/secp-logo.jpg" alt="Achivements Logos"></img>
+                <img className="w-full text-black bg-white" src="assets/secp-logo.jpg" alt="Achivements Logos"></img>
               </div>
             </div>
 
             <div className="flex gap-2 mt-2">
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full text-black bg-white" src="/assets/pasha-logo.jpg" alt="Achivements Logos"></img>
+                <img className="w-full text-black bg-white" src="assets/pasha-logo.jpg" alt="Achivements Logos"></img>
               </div>
 
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full text-black bg-white" src="/assets/go-awards-logo.png" alt="Achivements Logos"></img>
+                <img className="w-full text-black bg-white" src="assets/go-awards-logo.png" alt="Achivements Logos"></img>
               </div>
             </div>
            
             <div className="flex gap-2 mt-2">
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="w-full text-black bg-white" src="/assets/brand-of-the-logo.png" alt="Achivements Logos"></img>
+                <img className="w-full text-black bg-white" src="assets/brand-of-the-logo.png" alt="Achivements Logos"></img>
               </div>
               <div className="w-[18%] md:w-[47%] lg:w-[48%]">
-                <img className="invisible w-full text-black bg-white" src="/assets/brand-of-the-logo.png" alt="Achivements Logos"></img>
+                <img className="invisible w-full text-black bg-white" src="assets/brand-of-the-logo.png" alt="Achivements Logos"></img>
               </div>
             </div>
           </div>

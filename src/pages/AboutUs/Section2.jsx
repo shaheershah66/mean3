@@ -8,7 +8,7 @@ export default function Section2() {
         <div className="image-container w-full md:w-[70%] sxl:w-[50%] h-auto md:h-[524px] m-auto">
           <img
             className="block object-contain w-auto h-full mx-auto md:w-full"
-            src="section2-aboutus.webp"
+            src="assets/section2-aboutus.webp"
             alt="CEO Image"
           ></img>
         </div>

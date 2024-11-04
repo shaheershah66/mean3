@@ -54,14 +54,14 @@ export default function Header() {
               <div className="relative logo-container group">
                 <Link to="/">
                   <img
-                    src="/assets/mean3-logo.png"
+                    src="assets/mean3-logo.png"
                     width={118}
                     height={70}
                     alt="Mean3 Logo"
                   />
                   <img
                     className="absolute left-0 top-[20%] opacity-0 cursor-pointer"
-                    src="/assets/mean3-logo.png"
+                    src="assets/mean3-logo.png"
                   ></img>
                 </Link>
                 {/* hover card */}
@@ -70,7 +70,7 @@ export default function Header() {
                     <div className="w-1/2 px-4">
                       <div className="flex flex-col items-center logo-container">
                         <img
-                          src="/assets/mean3-black-logo.png"
+                          src="assets/mean3-black-logo.png"
                           width={150}
                           height={150}
                           alt="Mean3 Black Logo"

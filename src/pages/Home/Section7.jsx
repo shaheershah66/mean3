@@ -4,17 +4,17 @@ import reviewsJson from "../../data/reviews.json";
 export default function Section7() {
   const reviewsData = reviewsJson;
   const bgImage = {
-    backgroundImage: "url('/assets/bg-reviews.jpg')",
+    backgroundImage: "url('assets/bg-reviews.jpg')",
   };
   const sliderImages = [
-    "/assets/andriod-logo.png",
-    "/assets/unity-logo.png",
-    "/assets/apple-logo.png",
-    "/assets/magento-logo.png",
-    "/assets/andriod-logo.png",
-    "/assets/unity-logo.png",
-    "/assets/apple-logo.png",
-    "/assets/magento-logo.png",
+    "assets/andriod-logo.png",
+    "assets/unity-logo.png",
+    "assets/apple-logo.png",
+    "assets/magento-logo.png",
+    "assets/andriod-logo.png",
+    "assets/unity-logo.png",
+    "assets/apple-logo.png",
+    "assets/magento-logo.png",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 
