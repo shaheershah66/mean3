@@ -7,6 +7,8 @@ export default function Header() {
   const navLinks = navLinksJson;
   const location = useLocation();
   const [show, setShow] = useState(true);
+  const [menu, setMenu] = useState(false);
+  const [menuSublist, setMenuSublist] = useState(false);
 
   const controlNavbar = () => {
     if (window.scrollY === 0) {
@@ -26,6 +28,71 @@ export default function Header() {
 
   return (
     <div className="Header h-[122px] w-full text-white bg-transparent fixed z-20 top-0 left-0">
+      {/* mobile menu */}
+      <div className={`absolute transition-all duration-1000 ease-in-out ${menu ?  "h-screen py-[60px]" : "h-0 py-0"} top-0 left-0 z-40  flex  w-full overflow-hidden text-center bg-white mobile-menu`}>
+        <ul className="w-full py-[40px] relative mb-[10px] font-sans">
+          <div onClick={() => setMenu(!menu)} className="absolute delay-150 crossBtn right-[30px] top-[-20px] cursor-pointer">
+            <svg fill="none" viewBox="0 0 15 15" height="20px" width="20px" className={`transition-transform duration-1000 delay-150 ease-out ${menu ? "-rotate-180" : "rotate-180"}`}>
+              <path
+                fill="black"
+                fillRule="evenodd"
+                d="M11.782 4.032a.575.575 0 10-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 00-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 00.814.814L7.5 8.313l3.469 3.469a.575.575 0 00.813-.814L8.313 7.5l3.469-3.468z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </div>
+          {navLinks.map((parent) => {
+            const hasChildren = parent.hasOwnProperty("children");
+            const isActive =
+              hasChildren &&
+              parent.children.some((child) => child.url === location.pathname);
+            return (
+              <li>
+                {!hasChildren ? (
+                  <NavLink
+                    to={parent.url}
+                    className={({ isActive }) =>
+                      `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg text-black ${
+                        isActive ? "text-[#cd2122]" : ""
+                      }`
+                    }
+                  >
+                    {parent.title}
+                  </NavLink>
+                ) : (
+                  <span
+                    onClick={() => setMenuSublist(!menuSublist)}
+                    className={`${
+                      isActive ? "text-[#cd2122]" : ""
+                    } cursor-pointer text-lg uppercase inline-block w-full leading-[1.6] py-[0.17em] text-black`}
+                  >
+                    {parent.title}
+                    <ul className={`w-full font-sans px-[1em] transition-all duration-[1500ms] ease-in-out overflow-hidden ${menuSublist ? "max-h-[500px]" : "max-h-0"}`}>
+                      {parent.children.map((child) => {
+                        return (
+                          <li className="w-full">
+                            <NavLink
+                              to={child.url}
+                              className={({ isActive }) =>
+                                `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg text-black ${
+                                  isActive ? "text-[#cd2122]" : ""
+                                }`
+                              }
+                            >
+                              {child.title}
+                            </NavLink>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </span>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      {/* mobile menu ends here */}
       <div className="header-bg absolute top-0 left-0 w-full h-[100%] bg-gradient-to-t from-transparent to-black/[.7] -z-10">
         <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
           <div
@@ -65,7 +132,7 @@ export default function Header() {
                   ></img>
                 </Link>
                 {/* hover card */}
-                <div className="absolute top-full left-0 w-[440px] shadow-2xl bg-[#cd2122] z-10 pt-[30px] pb-[25px] px-5 mt-[10px] text-xs leading-5 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none">
+                <div className="absolute hidden md:block top-full left-0 w-[440px] shadow-2xl bg-[#cd2122] z-10 pt-[30px] pb-[25px] px-5 mt-[10px] text-xs leading-5 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none">
                   <div className="flex">
                     <div className="w-1/2 px-4">
                       <div className="flex flex-col items-center logo-container">
@@ -98,11 +165,29 @@ export default function Header() {
                 {/* hover card ends */}
               </div>
               {/* navigation */}
-              <nav className="ml-24">
-                <ul className="flex">
+              <nav className="ml-[20px] lg:ml-24">
+                {/* menu bar  */}
+                <svg onClick={() => setMenu(!menu)}
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  height="22px"
+                  width="22px"
+                  className="block cursor-pointer opacity-80 lg:hidden"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
+                  />
+                </svg>
+                {/* menu bar ends here */}
+                <ul className="hidden lg:flex">
                   {navLinks.map((parent) => {
                     const hasChildren = parent.hasOwnProperty("children");
-                    const isActive = hasChildren && parent.children.some(child => child.url === location.pathname);
+                    const isActive =
+                      hasChildren &&
+                      parent.children.some(
+                        (child) => child.url === location.pathname
+                      );
 
                     return (
                       <li>
@@ -118,23 +203,31 @@ export default function Header() {
                             {parent.title}
                           </NavLink>
                         ) : (
-                          <span className={`${isActive? "bg-[#cd2122]" : ""} text-xs rounded-sm before:rounded-sm uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}>
+                          <span
+                            className={`${
+                              isActive ? "bg-[#cd2122]" : ""
+                            } text-xs rounded-sm before:rounded-sm uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}
+                          >
                             {parent.title}
                             <ul className="py-[6px] invisible group-hover:visible group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
-                              {
-                                parent.children.map((child) => {
-                                  return(
-                                    <li className="w-full">
-                                      <NavLink 
-                                        to={child.url}
-                                        className={({ isActive }) => `inline-block hover:text-[#323232] hover:bg-[rgba(0,0,0,.04)] ${isActive ? "text-[#323232] bg-[rgba(0,0,0,.04)]" : ""} w-full px-5 py-[10px] text-xs leading-[14px] border-b-[1px] border-solid border-b-[rgba(0,0,0,.03)] z-10`}
-                                      >
-                                        {child.title}
-                                      </NavLink>
-                                    </li>
-                                  )
-                                })
-                              } 
+                              {parent.children.map((child) => {
+                                return (
+                                  <li className="w-full">
+                                    <NavLink
+                                      to={child.url}
+                                      className={({ isActive }) =>
+                                        `inline-block hover:text-[#323232] hover:bg-[rgba(0,0,0,.04)] ${
+                                          isActive
+                                            ? "text-[#323232] bg-[rgba(0,0,0,.04)]"
+                                            : ""
+                                        } w-full px-5 py-[10px] text-xs leading-[14px] border-b-[1px] border-solid border-b-[rgba(0,0,0,.03)] z-10`
+                                      }
+                                    >
+                                      {child.title}
+                                    </NavLink>
+                                  </li>
+                                );
+                              })}
                             </ul>
                           </span>
                         )}
