@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Portfolio({bgImage, objectPosition, customer}) {
+export default function Portfolio({bgImage, objectPosition, customer , altText}) {
     return (
         <div className="relative w-full h-full overflow-hidden section1-container">
           <img
             className={`absolute top-0 left-0 items-center block object-cover w-full h-full ${objectPosition} -z-10`}
-            src={bgImage}
+            src={bgImage} alt={altText}
           ></img>
           <div className="text-white font-sans top-auto bottom-[35px]  mx-auto w-[95%]  absolute left-1/2 -translate-x-1/2 -translate-y-1/2  md:w-[750px]  md:mt-0 lg:w-[970px] lg:top-1/2 lg:bottom-auto lg:mt-[70px] xl:w-[1170px]">
               <h2 className={`${customer ? "inline-block" : "hidden"} py-[25px] font-mont px-4 mb-5 md:mb-[40px] min-[1280px]:mb-[80px] mt-5 relative before:rounded-lg before:-z-10 before:skew-x-[20deg]  before:rounded-r-lg before:content-[''] before:w-full before:h-full before:bg-black/[0.6] before:absolute before:left-0 before:top-0`}>

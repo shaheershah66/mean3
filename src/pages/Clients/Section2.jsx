@@ -18,7 +18,7 @@ export default function Section2() {
                   <img
                     className="block w-full h-[170px] shadow-[0_14px_28px_rgba(0,0,0,0.25),_0_10px_10px_rgba(0,0,0,0.22)]"
                     src={imgUrl}
-                    alt="clients-logos"
+                    alt="Clients Logos"
                   ></img>
                 </a>
               </div>

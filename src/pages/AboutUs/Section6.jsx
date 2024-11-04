@@ -12,8 +12,9 @@ export default function Section6() {
           of Ecommerce globally.
         </p>
         <img
-          className="inline-block w-[76%] object-cover pb-8"
-          src="team.webp"
+          className="inline-block w-[76%] object-cover pb-8 text-left"
+          src="/assets/team.webp"
+          alt="Team Image"
         ></img>
         <div className="py-5 btn-container md:pb-11">
           <Link

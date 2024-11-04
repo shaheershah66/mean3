@@ -1,49 +1,10 @@
 import { useState, useEffect } from "react";
 import SocialMediaIcons from "./SocialMediaIcons";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import navLinksJson from "../data/navLinks.json";
 
 export default function Header() {
-  const navLinks = [
-    {
-      title: "home",
-      url: "/",
-    },
-
-    {
-      title: "services",
-      url: "/services",
-    },
-
-    {
-      title: "portfolio",
-      children: [
-        {
-          title: "our clients",
-          url: "/clients",
-        },
-
-        {
-          title: "clients testimonials",
-          url: "/clients-testimonials",
-        },
-      ],
-    },
-
-    {
-      title: "blogs",
-      url: "/blogs",
-    },
-
-    {
-      title: "about us",
-      url: "/about-us",
-    },
-
-    {
-      title: "contact us",
-      url: "/contact-us",
-    },
-  ];
+  const navLinks = navLinksJson;
   const location = useLocation();
   const [show, setShow] = useState(true);
 
@@ -93,15 +54,14 @@ export default function Header() {
               <div className="relative logo-container group">
                 <Link to="/">
                   <img
-                    className=""
-                    src="assets/mean3-logo.png"
+                    src="/assets/mean3-logo.png"
                     width={118}
                     height={70}
                     alt="Mean3 Logo"
                   />
                   <img
                     className="absolute left-0 top-[20%] opacity-0 cursor-pointer"
-                    src="assets/mean3-logo.png"
+                    src="/assets/mean3-logo.png"
                   ></img>
                 </Link>
                 {/* hover card */}
@@ -110,7 +70,7 @@ export default function Header() {
                     <div className="w-1/2 px-4">
                       <div className="flex flex-col items-center logo-container">
                         <img
-                          src="assets/mean3-black-logo.png"
+                          src="/assets/mean3-black-logo.png"
                           width={150}
                           height={150}
                           alt="Mean3 Black Logo"
@@ -150,7 +110,7 @@ export default function Header() {
                           <NavLink
                             to={parent.url}
                             className={({ isActive }) =>
-                              `uppercase py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open ${
+                              `uppercase text-xs py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:rounded-sm before:-z-[2] before:bg-[#cd2122] before:left-0 rounded-sm before:w-full before:hover:animate-middle-open ${
                                 isActive ? "bg-[#cd2122]" : ""
                               }`
                             }
@@ -158,7 +118,7 @@ export default function Header() {
                             {parent.title}
                           </NavLink>
                         ) : (
-                          <span className={`${isActive? "bg-[#cd2122]" : ""} uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}>
+                          <span className={`${isActive? "bg-[#cd2122]" : ""} text-xs rounded-sm before:rounded-sm uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}>
                             {parent.title}
                             <ul className="py-[6px] invisible group-hover:visible group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
                               {

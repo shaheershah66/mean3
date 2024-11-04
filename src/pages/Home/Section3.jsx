@@ -25,7 +25,8 @@ export default function Section3() {
                     src={service.image}
                     width={63}
                     height={63}
-                    alt={service.title}
+                    alt="Services Logos"
+                    className="text-left"
                   />
                 </div>
                 <h3 className="py-[15px] text-[22px] lg:text-base text-black capitalize">

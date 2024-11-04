@@ -9,6 +9,7 @@ export default function Section2() {
           <img
             className="block object-contain w-auto h-full mx-auto md:w-full"
             src="section2-aboutus.webp"
+            alt="CEO Image"
           ></img>
         </div>
         <div className="w-full text-center md:text-left pt-[70px] md:w-[50%] md:pt-[34px]">

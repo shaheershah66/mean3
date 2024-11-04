@@ -2,7 +2,6 @@ import valuesJson from "../../data/values.json";
 
 export default function Section5() {
   const valuesData = valuesJson;
-  console.log(valuesData);
 
   return (
     <div className="w-full Section5">
@@ -20,10 +19,11 @@ export default function Section5() {
             return (
               <div className="box-container flex justify-start items-center flex-col py-[4%] px-[1.5%] w-[85%] xs:w-[40%] md:w-[31.33%] xl:w-[20%] shadow-box">
                 <img
-                  className="inline-block mb-4"
+                  className="inline-block mb-4 leading-tight"
                   src={item.imageUrl}
                   height={61}
                   width={61}
+                  alt="Values Logos"
                 ></img>
                 <div className="text-center text-container">
                   <h3 className="text-base font-bold uppercase">
