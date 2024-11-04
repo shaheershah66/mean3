@@ -1,5 +1,5 @@
 import "./index.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import Layout from "./componets/Layout";
 import Home from "./pages/Home";
 import Clients from "./pages/Clients";
@@ -9,7 +9,7 @@ import ContactUs from "./pages/ContactUs";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -18,7 +18,7 @@ function App() {
             <Route path="/contact-us" element={<ContactUs />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
