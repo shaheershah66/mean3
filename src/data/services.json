@@ -1,7 +1,7 @@
 [
   {
     "title": "web / app development",
-    "image": "/assets/web-logo.png",
+    "image": "assets/web-logo.png",
     "links": [
       {
         "linkName": "web development",
@@ -16,7 +16,7 @@
 
   {
     "title": "e-commerce development",
-    "image": "/assets/e-commerce-logo.png",
+    "image": "assets/e-commerce-logo.png",
     "links": [
       {
         "linkName": "shopify",
@@ -31,7 +31,7 @@
 
   {
     "title": "graphic designing service",
-    "image": "/assets/mob-logo.png",
+    "image": "assets/mob-logo.png",
     "links": [
       {
         "linkName": "logo and branding",
@@ -46,7 +46,7 @@
 
   {
     "title": "staff augmentation",
-    "image": "/assets/staff-logo.png",
+    "image": "assets/staff-logo.png",
     "links": [
       {
         "linkName": "staff augmentation",
@@ -61,7 +61,7 @@
 
   {
     "title": "digital marketing",
-    "image": "/assets/digital-logo.png",
+    "image": "assets/digital-logo.png",
     "links": [
       {
         "linkName": "performance marketing",
