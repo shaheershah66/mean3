@@ -8,13 +8,21 @@ export default function Header() {
   const location = useLocation();
   const [show, setShow] = useState(true);
   const [menu, setMenu] = useState(false);
-  const [menuSublist, setMenuSublist] = useState(false);
+  const [subMenu, setSubMenu] = useState(null);
 
   const controlNavbar = () => {
     if (window.scrollY === 0) {
       setShow(true);
     } else {
       setShow(false);
+    }
+  };
+
+  const handleSubMenu = (submenuIndex) => {
+    if (subMenu === submenuIndex) {
+      setSubMenu(null);
+    } else {
+      setSubMenu(submenuIndex);
     }
   };
 
@@ -29,10 +37,25 @@ export default function Header() {
   return (
     <div className="Header h-[122px] w-full text-white bg-transparent fixed z-20 top-0 left-0">
       {/* mobile menu */}
-      <div className={`absolute transition-all duration-1000 ease-in-out ${menu ?  "h-screen py-[60px]" : "h-0 py-0"} top-0 left-0 z-40  flex  w-full overflow-hidden text-center bg-white mobile-menu`}>
+      <div
+        className={`absolute transition-all duration-1000 ease-in-out ${
+          menu ? "h-screen py-[60px]" : "h-0 py-0"
+        } top-0 left-0 z-40  flex  w-full overflow-hidden text-center bg-white mobile-menu`}
+      >
         <ul className="w-full py-[40px] relative mb-[10px] font-sans">
-          <div onClick={() => setMenu(!menu)} className="absolute delay-150 crossBtn right-[30px] top-[-20px] cursor-pointer">
-            <svg fill="none" viewBox="0 0 15 15" height="20px" width="20px" className={`transition-transform duration-1000 delay-150 ease-out ${menu ? "-rotate-180" : "rotate-180"}`}>
+          <div
+            onClick={() => setMenu(!menu)}
+            className="absolute delay-150 crossBtn right-[30px] top-[-20px] cursor-pointer"
+          >
+            <svg
+              fill="none"
+              viewBox="0 0 15 15"
+              height="20px"
+              width="20px"
+              className={`transition-transform duration-1000 delay-150 ease-out ${
+                menu ? "-rotate-180" : "rotate-180"
+              }`}
+            >
               <path
                 fill="black"
                 fillRule="evenodd"
@@ -41,7 +64,7 @@ export default function Header() {
               />
             </svg>
           </div>
-          {navLinks.map((parent) => {
+          {navLinks.map((parent, parentIndex) => {
             const hasChildren = parent.hasOwnProperty("children");
             const isActive =
               hasChildren &&
@@ -50,10 +73,11 @@ export default function Header() {
               <li>
                 {!hasChildren ? (
                   <NavLink
+                    onClick={() => {setMenu(!menu); setSubMenu(null)}}
                     to={parent.url}
                     className={({ isActive }) =>
-                      `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg text-black ${
-                        isActive ? "text-[#cd2122]" : ""
+                      `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg ${
+                        isActive ? "text-[#cd2122]" : "text-black"
                       }`
                     }
                   >
@@ -61,21 +85,26 @@ export default function Header() {
                   </NavLink>
                 ) : (
                   <span
-                    onClick={() => setMenuSublist(!menuSublist)}
+                    onClick={() => handleSubMenu(parentIndex)}
                     className={`${
-                      isActive ? "text-[#cd2122]" : ""
-                    } cursor-pointer text-lg uppercase inline-block w-full leading-[1.6] py-[0.17em] text-black`}
+                      isActive ? "text-[#cd2122]" : "text-black"
+                    } cursor-pointer text-lg uppercase inline-block w-full leading-[1.6] py-[0.17em]`}
                   >
                     {parent.title}
-                    <ul className={`w-full font-sans px-[1em] transition-all duration-[1500ms] ease-in-out overflow-hidden ${menuSublist ? "max-h-[500px]" : "max-h-0"}`}>
+                    <ul
+                      className={`w-full font-sans px-[1em] transition-all duration-[1000ms] ease-in-out overflow-hidden ${
+                        subMenu === parentIndex ? "max-h-[500px]" : "max-h-0"
+                      }`}
+                    >
                       {parent.children.map((child) => {
                         return (
                           <li className="w-full">
                             <NavLink
+                              onClick={() => setMenu(!menu)}
                               to={child.url}
                               className={({ isActive }) =>
-                                `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg text-black ${
-                                  isActive ? "text-[#cd2122]" : ""
+                                `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg ${
+                                  isActive ? "text-[#cd2122]" : "text-black"
                                 }`
                               }
                             >
@@ -113,9 +142,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-
           <div className="divider opacity-20 bg-white w-full h-[1px]"></div>
-
           <div className="flex items-center justify-between w-full h-auto header-last">
             <div className="flex items-center">
               <div className="relative logo-container group">
@@ -167,7 +194,8 @@ export default function Header() {
               {/* navigation */}
               <nav className="ml-[20px] lg:ml-24">
                 {/* menu bar  */}
-                <svg onClick={() => setMenu(!menu)}
+                <svg
+                  onClick={() => setMenu(!menu)}
                   viewBox="0 0 16 16"
                   fill="currentColor"
                   height="22px"
@@ -188,7 +216,6 @@ export default function Header() {
                       parent.children.some(
                         (child) => child.url === location.pathname
                       );
-
                     return (
                       <li>
                         {!hasChildren ? (
@@ -238,7 +265,6 @@ export default function Header() {
               </nav>
               {/* navigation ends here */}
             </div>
-
             <div className="btn-container">
               <Link
                 to="#"
