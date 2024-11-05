@@ -10,60 +10,47 @@ export default function Header() {
   const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState(null);
 
-  const controlNavbar = () => {
-    if (window.scrollY === 0) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
-
-  const handleSubMenu = (submenuIndex) => {
-    if (subMenu === submenuIndex) {
-      setSubMenu(null);
-    } else {
-      setSubMenu(submenuIndex);
-    }
-  };
+  const handleNavbar = () =>
+    window.scrollY === 0 ? setShow(true) : setShow(false);
+  const handleSubMenu = (submenuIndex) =>
+    subMenu === submenuIndex ? setSubMenu(null) : setSubMenu(submenuIndex);
 
   useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
+    window.addEventListener("scroll", handleNavbar);
 
     return () => {
-      window.removeEventListener("scroll", controlNavbar);
+      window.removeEventListener("scroll", handleNavbar);
     };
   }, []);
 
   return (
-    <div className="Header h-[122px] w-full text-white bg-transparent fixed z-20 top-0 left-0">
+    <div className="Header h-auto md:h-[122px] w-full relative bg-[#333] text-white md:bg-transparent md:fixed z-20 md:top-0 md:left-0">
       {/* mobile menu */}
       <div
-        className={`absolute transition-all duration-1000 ease-in-out ${
-          menu ? "h-screen py-[60px]" : "h-0 py-0"
-        } top-0 left-0 z-40  flex  w-full overflow-hidden text-center bg-white mobile-menu`}
+        className={`absolute transition-all duration-1000 ease-in-out block lg:hidden ${
+          menu ? "h-screen py-[60px] overflow-auto" : "h-0 py-0 overflow-hidden"
+        } top-0 left-0 z-40  flex  w-full  text-center bg-white mobile-menu`}
       >
+        {/* cross button */}
+        <svg
+          onClick={() => setMenu(!menu)}
+          fill="none"
+          viewBox="0 0 15 15"
+          height="20px"
+          width="20px"
+          className={`transition-transform duration-1000 ease-in-out ${
+            menu ? "rotate-0 fixed" : "rotate-180 absolute"
+          } crossBtn cursor-pointer right-[45px] z-50 top-[45px]`}
+        >
+          <path
+            fill="black"
+            fillRule="evenodd"
+            d="M11.782 4.032a.575.575 0 10-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 00-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 00.814.814L7.5 8.313l3.469 3.469a.575.575 0 00.813-.814L8.313 7.5l3.469-3.468z"
+            clipRule="evenodd"
+          />
+        </svg>
+        {/* cross button ends here */}
         <ul className="w-full py-[40px] relative mb-[10px] font-sans">
-          <div
-            onClick={() => setMenu(!menu)}
-            className="absolute delay-150 crossBtn right-[30px] top-[-20px] cursor-pointer"
-          >
-            <svg
-              fill="none"
-              viewBox="0 0 15 15"
-              height="20px"
-              width="20px"
-              className={`transition-transform duration-1000 delay-150 ease-out ${
-                menu ? "-rotate-180" : "rotate-180"
-              }`}
-            >
-              <path
-                fill="black"
-                fillRule="evenodd"
-                d="M11.782 4.032a.575.575 0 10-.813-.814L7.5 6.687 4.032 3.218a.575.575 0 00-.814.814L6.687 7.5l-3.469 3.468a.575.575 0 00.814.814L7.5 8.313l3.469 3.469a.575.575 0 00.813-.814L8.313 7.5l3.469-3.468z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
           {navLinks.map((parent, parentIndex) => {
             const hasChildren = parent.hasOwnProperty("children");
             const isActive =
@@ -73,7 +60,10 @@ export default function Header() {
               <li>
                 {!hasChildren ? (
                   <NavLink
-                    onClick={() => {setMenu(!menu); setSubMenu(null)}}
+                    onClick={() => {
+                      setMenu(!menu);
+                      setSubMenu(null);
+                    }}
                     to={parent.url}
                     className={({ isActive }) =>
                       `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg ${
@@ -122,19 +112,19 @@ export default function Header() {
         </ul>
       </div>
       {/* mobile menu ends here */}
-      <div className="header-bg absolute top-0 left-0 w-full h-[100%] bg-gradient-to-t from-transparent to-black/[.7] -z-10">
+      <div className="header-bg relative md:absolute md:top-0 md:left-0 w-full h-[100%] bg-gradient-to-t from-transparent to-black/[.7] -z-10">
         <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
           <div
-            className={`header-first flex w-full items-center text-xs overflow-hidden transition-all ease-in-out ${
-              show ? "h-[46px]" : "h-0"
+            className={`header-first flex w-full flex-wrap py-[5px] md:py-0 items-center text-xs overflow-hidden transition-all ease-in-out ${
+              show ? "h-auto md:h-[46px]" : "h-0"
             }`}
           >
-            <div className="header-inner-first-icons">
+            <div className="header-first-icons m-[10px] md:m-0">
               <SocialMediaIcons />
             </div>
 
             <div className="header-first-contact">
-              <div className="ml-4">
+              <div className="m-[10px] md:ml-4">
                 QUESTIONS? CALL:{" "}
                 <a href="tel:+1(832)278-2928" className="font-bold">
                   +1 (832) 278-2928
@@ -143,9 +133,9 @@ export default function Header() {
             </div>
           </div>
           <div className="divider opacity-20 bg-white w-full h-[1px]"></div>
-          <div className="flex items-center justify-between w-full h-auto header-last">
-            <div className="flex items-center">
-              <div className="relative logo-container group">
+          <div className="flex flex-col items-center justify-between w-full h-auto md:flex-row header-last">
+            <div className="flex items-center lg:w-[25%]">
+              <div className="relative my-5 md:mt-0 logo-container group">
                 <Link to="/">
                   <img
                     src="assets/mean3-logo.png"
@@ -154,7 +144,7 @@ export default function Header() {
                     alt="Mean3 Logo"
                   />
                   <img
-                    className="absolute left-0 top-[20%] opacity-0 cursor-pointer"
+                    className=" hidden md:block absolute left-0 top-[20%] opacity-0 cursor-pointer"
                     src="assets/mean3-logo.png"
                   ></img>
                 </Link>
@@ -192,8 +182,13 @@ export default function Header() {
                 {/* hover card ends */}
               </div>
               {/* navigation */}
-              <nav className="ml-[20px] lg:ml-24">
-                {/* menu bar  */}
+
+              {/* navigation ends here */}
+            </div>
+            <div className="divider block md:hidden opacity-20 bg-white w-full h-[1px]"></div>
+            <div className="w-full px-[10px] md:px-[0px] md:w-[80%] lg:w-[75%] flex justify-between items-center btn-container">
+              <nav className="">
+                {/* menu button */}
                 <svg
                   onClick={() => setMenu(!menu)}
                   viewBox="0 0 16 16"
@@ -207,7 +202,7 @@ export default function Header() {
                     d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z"
                   />
                 </svg>
-                {/* menu bar ends here */}
+                {/* menu button ends here */}
                 <ul className="hidden lg:flex">
                   {navLinks.map((parent) => {
                     const hasChildren = parent.hasOwnProperty("children");
@@ -263,12 +258,9 @@ export default function Header() {
                   })}
                 </ul>
               </nav>
-              {/* navigation ends here */}
-            </div>
-            <div className="btn-container">
               <Link
                 to="#"
-                className="px-[10px] py-[5px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col border-none"
+                className="px-[10px] relative top-2 md:top-0 left-0 py-[5px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col border-none"
               >
                 <strong className="text-[17px]">Free</strong>
                 <span>Quote</span>

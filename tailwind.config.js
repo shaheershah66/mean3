@@ -37,7 +37,7 @@ module.exports = {
       boxShadow: {
         "line": "0px 4px 4px 0px #00000040",
         "box": "0px 0px 20px 0px #00000040",
-        "input-cont": "inset 1px 2px 0 rgba(0,0,0,.06)"
+        "input-cont": "inset 1px 2px 0 rgba(0,0,0,.06)",
       },
 
       keyframes: {
@@ -50,10 +50,24 @@ module.exports = {
           "0%": { top: "50%", height: "0" },
           "100%": { top: "0", height: "100%" },
         },
+
+        growHorizontal: {
+          '0%': { height: '0' },
+          '100%': { height: '100%' },
+        },
+
+        growVertical: {
+          '0%': { height: '0' },
+          '100%': { height: '100%' },
+        },
+
       },
+      
       animation: {
         "slide-up": "slide-up 1s ease-in-out",
-        "middle-open":"middle-open 0.2s ease-in-out forwards"
+        "middle-open":"middle-open 0.2s ease-in-out forwards",
+        "growHorizontal": 'growHorizontal 0.3s ease forwards',
+        "growVertical": 'growVertical 0.3s ease forwards',
       },
     },
   },
