@@ -10,20 +10,16 @@ module.exports = {
       'xs': '481px',
 
       'sm': '640px',
-      // => @media (min-width: 640px) { ... }
 
       'smd': '735px',
 
       'md': '768px',
-      // => @media (min-width: 768px) { ... }
 
       'lg': '992px',
-      // => @media (min-width: 1024px) { ... }
 
       'sxl': '1081px',
 
       'xl': '1200px',
-      // => @media (min-width: 1280px) { ... }
     },
     extend: {
       fontFamily: {
@@ -32,6 +28,7 @@ module.exports = {
       
       objectPosition: {
         'center-top': 'center top',
+        'center-center': 'center center'
       },
 
       boxShadow: {
