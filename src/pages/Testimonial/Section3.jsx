@@ -1,8 +1,9 @@
 import React from "react";
 import testimonialsJson from "../../data/testimonials.json";
 
-export default function Section3() {
+export default function Section3({setIFrame}) {
   const testimonialsData = testimonialsJson;
+  console.log(setIFrame);
 
   const parseText = (text) => {
     const regex = /(<strong>.*?<\/strong>)/g;
@@ -29,8 +30,8 @@ export default function Section3() {
                 ></img>
                 <div className="absolute w-full -translate-y-1/2 play-btn-container top-1/2">
                   <a
-                    className="block w-[80px] relative h-[80px] text-lg border-[2px] border-solid border-white mx-auto rounded-[50%]"
-                    href={item.videoUrl}
+                    onClick={() => setIFrame(item.videoUrl)}
+                    className="block w-[80px] relative h-[80px] text-lg border-[2px] border-solid border-white mx-auto rounded-[50%] cursor-pointer"
                   >
                     <svg
                       className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"

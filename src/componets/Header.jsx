@@ -4,11 +4,10 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import navLinksJson from "../data/navLinks.json";
 import Card from "./Card";
 
-export default function Header() {
+export default function Header({ menu, setMenu }) {
   const navLinks = navLinksJson;
   const location = useLocation();
   const [show, setShow] = useState(true);
-  const [menu, setMenu] = useState(false);
   const [subMenu, setSubMenu] = useState(null);
 
   const handleNavbar = () =>
@@ -34,13 +33,13 @@ export default function Header() {
       >
         {/* cross button */}
         <svg
-          onClick={() => setMenu(!menu)}
+          onClick={() => {setMenu(!menu); setSubMenu(null)}}
           fill="none"
           viewBox="0 0 15 15"
           height="20px"
           width="20px"
-          className={`transition-transform duration-1000 ease-in-out ${
-            menu ? "rotate-0 fixed" : "rotate-180 absolute"
+          className={`transition-transform duration-1000 ease-in-out delay-150  ${
+            menu ? "fixed rotate-0" : "rotate-180 absolute"
           } crossBtn cursor-pointer right-[45px] z-50 top-[45px]`}
         >
           <path
@@ -61,10 +60,7 @@ export default function Header() {
               <li>
                 {!hasChildren ? (
                   <NavLink
-                    onClick={() => {
-                      setMenu(!menu);
-                      setSubMenu(null);
-                    }}
+                    onClick={() => setMenu(!menu)}
                     to={parent.url}
                     className={({ isActive }) =>
                       `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg ${

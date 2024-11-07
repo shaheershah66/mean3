@@ -4,7 +4,6 @@ import testimonials2Json from "../../data/testimonials2.json";
 export default function Section4() {
   const testimonials2Data = testimonials2Json;
   const [textOpen, setTextOpen] = useState(new Array(testimonials2Data.length).fill(false));
-  console.log(textOpen);
 
   const handleTextOpen = (index) => {
     setTextOpen((prevTextOpen) => {

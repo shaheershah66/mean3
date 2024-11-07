@@ -18,7 +18,7 @@ export default function Section3() {
             return (
               <div
                 key={index}
-                className="relative hover:z-10 bg-[#eeeeee]  text-center w-full  md:text-left md:w-[48.6%] p-[30px] lg:p-[14px] lg:w-[20%] rounded-md cursor-pointer group transform transition-all duration-300 hover:bg-white hover:shadow-2xl hover:scale-105"
+                className="relative hover:z-10 bg-[#eeeeee]  text-center w-full  md:text-left md:w-[48.6%] p-[30px] lg:p-[14px] lg:w-[20%] rounded-md cursor-pointer group transform transition-all duration-300 hover:bg-white hover:shadow-2xl md:hover:scale-105"
               >
                 <div className="inline-block text-center logo-container">
                   <img

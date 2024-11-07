@@ -120,7 +120,7 @@ export default function Footer() {
               </Link>
             </p>
             <div className="flex items-center">
-              <p className="text-[#8b8c8d] mr-1">GET SOCIAL</p>
+              <p className="text-[#8b8c8d] mr-2">GET SOCIAL</p>
               <SocialMediaIcons />
             </div>
           </div>
