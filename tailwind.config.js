@@ -48,14 +48,9 @@ module.exports = {
           "100%": { top: "0", height: "100%" },
         },
 
-        growHorizontal: {
-          '0%': { height: '0' },
-          '100%': { height: '100%' },
-        },
-
-        growVertical: {
-          '0%': { height: '0' },
-          '100%': { height: '100%' },
+        grow: {
+          '0%': { height: '0', },
+          '100%': { height: '15px' },
         },
 
       },
@@ -63,8 +58,7 @@ module.exports = {
       animation: {
         "slide-up": "slide-up 1s ease-in-out",
         "middle-open":"middle-open 0.2s ease-in-out forwards",
-        "growHorizontal": 'growHorizontal 0.3s ease forwards',
-        "growVertical": 'growVertical 0.3s ease forwards',
+        "grow": 'grow 0.5s ease-out forwards',
       },
     },
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
@@ -9,6 +10,9 @@ import Section6 from "./Section6";
 export default function AboutUs() {
   return (
     <div className="leading-7 About-us">
+      <Helmet>
+        <title>About - Mean3 Software Solutions</title>
+      </Helmet>
       <Section1 />
       <Section2 />
       <Section3 />

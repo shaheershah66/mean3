@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
@@ -10,6 +11,9 @@ import Section7 from "./Section7";
 export default function Home() {
   return (
     <div className="Home">
+      <Helmet>
+        <title>Website | Mobile | Game | ERP | Software | Development - Mean3 Pvt Ltd</title>
+      </Helmet>
       <Section1 />
       <Section2 />
       <Section3 />
