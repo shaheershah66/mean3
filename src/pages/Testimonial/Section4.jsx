@@ -19,14 +19,14 @@ export default function Section4() {
           const text2 = item.hasOwnProperty("text2");
           const isTextOpen = textOpen[index];
           return (
-            <div className="flex font-sans text-[#535353] flex-col items-center w-full lg:w-1/3 md:px-[15px]">
+            <div key={item.name} className="flex font-sans text-[#535353] flex-col items-center w-full lg:w-1/3 md:px-[15px]">
               <a
                 href={item.imgUrl}
                 className="block mb-5 img-container"
               >
-                <img src={item.img}></img>
+                <img src={item.img} alt="Brand Logos"></img>
               </a>
-              <p class="text-[13px] text-justify mb-5 w-full">
+              <p className="text-[13px] text-justify mb-5 w-full">
                 {item.text}
                 {
                     text2 ? 

@@ -22,8 +22,6 @@ export default function Section7() {
   const [visibleImages, setVisibleImages] = useState(4); 
 
   useEffect(() => {
-    // Update the number of visible images based on window width
-    console.log("useEffect running");
     const updateVisibleImages = () => {
       const width = window.innerWidth;
       if (width >= 1200) {
@@ -40,18 +38,15 @@ export default function Section7() {
     updateVisibleImages();
     window.addEventListener("resize", updateVisibleImages);
 
-    // Start the automatic slider cycle
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + visibleImages) % sliderImages.length);
     }, 2000);
 
-    // Cleanup on unmount or when dependencies change
     return () => {
-      console.log("clean up")
       window.removeEventListener("resize", updateVisibleImages);
       clearInterval(interval);
     };
-  }, [visibleImages]); // Re-run the effect if visibleImages changes
+  }, [visibleImages]); 
 
   const activeSliderImages = Array.from({ length: visibleImages }, (_, i) => {
     return sliderImages[(activeIndex + i) % sliderImages.length];

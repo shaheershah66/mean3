@@ -18,7 +18,7 @@ export default function Card() {
         <div className="w-1/2 px-4">
           <p className="mb-5">
             <strong>+1 (832) 278-2928</strong> <br />
-            Email: <a href="mailto:info@mean3.com">info@mean3.com</a>
+            Email: <a href="mailto:info@mean3.com" className="hover:text-[hsla(0,0%,100%,.7)]">info@mean3.com</a>
           </p>
           <p className="mb-5">
             Mean3 Software Solutions <br />

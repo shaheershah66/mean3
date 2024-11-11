@@ -20,18 +20,18 @@ export default function Footer() {
                 <strong>Usa Office</strong>
               </h5>
               <h5 className="my-2">
-                <Link to="#">
+                <a href="https://goo.gl/maps/YM7aZ1wjW3VutLzg6" target="_blank" rel="noreferrer">
                   447 Broadway, 2nd Floor Suite #670, New York, New York 10013,
                   United States
-                </Link>
+                </a>
               </h5>
               <h5 className="mb-2 -mt-2">
-                <Link to="#">info@mean3.com</Link>
+                <a href="mailto:info@mean3.com">info@mean3.com</a>
               </h5>
               <h5 className="mb-2 -mt-2">
-                <Link to="#">
+                <a href="tel:+1(832)278-2928">
                   +1 (832) 278-2928
-                </Link>
+                </a>
               </h5>
             </div>
             <hr className="my-5"></hr>
@@ -40,19 +40,19 @@ export default function Footer() {
                 <strong>Pak Office</strong>
               </h5>
               <h5 className="my-2">
-                <Link to="#">
+                <a href="https://www.google.com/maps/place/Mean3+Pvt+Ltd/@24.8777607,67.0884744,15z/data=!4m5!3m4!1s0x0:0xfd1c01797a7a35da!8m2!3d24.8777682!4d67.0884694" target="_blank" rel="noreferrer">
                   2nd floor, 48-B Miran Mohammed Shah Rd, Mohammad Ali Society
                   (Machs), Karachi.
-                </Link>
+                </a>
               </h5>
               <h5 className="mb-2 -mt-2">
-                <Link to="#">info@mean3.com</Link>
+                <a href="mailto:info@mean3.com">info@mean3.com</a>
               </h5>
               <h5 className="mb-2 -mt-2">
-                <Link to="#">+923343257767</Link>
+                <a href="tel:+923343257767">+923343257767</a>
               </h5>
               <h5 className="mb-2 -mt-2">
-                <Link to="#">+923314016473</Link>
+                <a href="tel:+923314016473">+923314016473</a>
               </h5>
             </div>
           </div>

@@ -38,7 +38,7 @@ export default function IFrame({ iFrame, setIFrame }) {
             className="w-full h-full"
             src={iFrame}
             title="Testimonial Video"
-            allowFullScreen="true"
+            allowFullScreen={true}
           />
         </div>
       </div>

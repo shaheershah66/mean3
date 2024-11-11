@@ -12,7 +12,7 @@ export default function Header({ menu, setMenu }) {
 
   const handleNavbar = () =>
     window.scrollY === 0 ? setShow(true) : setShow(false);
-  
+
   const handleSubMenu = (submenuIndex) =>
     subMenu === submenuIndex ? setSubMenu(null) : setSubMenu(submenuIndex);
 
@@ -28,19 +28,29 @@ export default function Header({ menu, setMenu }) {
     <div className="Header h-auto md:h-[122px] w-full relative bg-[#333] text-white md:bg-transparent md:fixed z-20 md:top-0 md:left-0">
       {/* mobile menu */}
       <div
-        className={`absolute duration-700 ease-in-out block lg:hidden ${
-          menu ? "h-screen py-[60px] overflow-auto" : "h-0 py-0 overflow-hidden"
+        className={`absolute duration-700 ease-in-out overflow-hidden block lg:hidden ${
+          menu ? "h-screen py-[60px]" : "h-0 py-0"
         } top-0 left-0 z-40  flex  w-full  text-center bg-white mobile-menu`}
       >
         {/* cross button */}
         <div
           onClick={() => {
             setMenu(!menu);
-            setSubMenu(null) // Toggle menu state on click
+            setSubMenu(null); // Toggle menu state on click
           }}
-          className={`${menu ? "absolute" : "absolute rotate-180 transition-transform duration-1000 ease-out delay-150"}  w-[54px] h-[54px] cursor-pointer right-[30px] z-50 top-[30px]`}
+          className={`${
+            menu
+              ? "absolute"
+              : "absolute rotate-180 transition-transform duration-1000 ease-out delay-150"
+          }  w-[54px] h-[54px] cursor-pointer right-[30px] z-50 top-[30px]`}
         >
-          <span className={` ${menu ? "before:animate-grow after:animate-grow before:delay-200 after:delay-700" : ""} relative block w-full h-full before:content-[''] before:w-[2px] before:block before:absolute before:h-[15px] before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-45  after:content-[''] after:w-[2px] after:block after:absolute after:h-[15px] after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45`}></span>
+          <span
+            className={` ${
+              menu
+                ? "before:animate-grow after:animate-grow before:delay-200 after:delay-700"
+                : ""
+            } relative block w-full h-full before:content-[''] before:w-[2px] before:block before:absolute before:h-[15px] before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-45  after:content-[''] after:w-[2px] after:block after:absolute after:h-[15px] after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45`}
+          ></span>
         </div>
         {/* cross button ends here */}
         <ul className="w-full py-[40px] relative mb-[10px] font-sans">
@@ -50,13 +60,13 @@ export default function Header({ menu, setMenu }) {
               hasChildren &&
               parent.children.some((child) => child.url === location.pathname);
             return (
-              <li>
+              <li key={parent.title}>
                 {!hasChildren ? (
                   <NavLink
                     onClick={() => setMenu(!menu)}
                     to={parent.url}
                     className={({ isActive }) =>
-                      `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg ${
+                      `uppercase leading-[1.6] inline-block py-[0.17em] text-lg ${
                         isActive ? "text-[#cd2122]" : "text-black"
                       }`
                     }
@@ -64,26 +74,30 @@ export default function Header({ menu, setMenu }) {
                     {parent.title}
                   </NavLink>
                 ) : (
-                  <span
-                    onClick={() => handleSubMenu(parentIndex)}
-                    className={`${
-                      isActive ? "text-[#cd2122]" : "text-black"
-                    } cursor-pointer text-lg uppercase inline-block w-full leading-[1.6] py-[0.17em]`}
-                  >
-                    {parent.title}
+                  <>
+                    <span
+                      onClick={() => handleSubMenu(parentIndex)}
+                      className={`${
+                        isActive ? "text-[#cd2122]" : "text-black"
+                      } cursor-pointer text-lg uppercase leading-[1.6] py-[0.17em]`}
+                    >
+                      {parent.title}
+                    </span>
                     <ul
                       className={`w-full font-sans transition-all duration-700 ease-in-out overflow-hidden ${
-                        subMenu === parentIndex ? "max-h-[500px] pb-[1em]" : "max-h-0 pb-0"
+                        subMenu === parentIndex
+                          ? "max-h-[500px] pb-[1em]"
+                          : "max-h-0 pb-0"
                       }`}
                     >
                       {parent.children.map((child) => {
                         return (
-                          <li className="w-full">
+                          <li className="w-full" key={child.title}>
                             <NavLink
                               onClick={() => setMenu(!menu)}
                               to={child.url}
                               className={({ isActive }) =>
-                                `uppercase inline-block leading-[1.6] py-[0.17em] w-full text-lg ${
+                                `uppercase leading-[1.6] py-[0.17em] inline-block text-lg ${
                                   isActive ? "text-[#cd2122]" : "text-black"
                                 }`
                               }
@@ -94,7 +108,7 @@ export default function Header({ menu, setMenu }) {
                         );
                       })}
                     </ul>
-                  </span>
+                  </>
                 )}
               </li>
             );
@@ -103,14 +117,18 @@ export default function Header({ menu, setMenu }) {
       </div>
       {/* mobile menu ends here */}
       {/* bg overlay */}
-      <div className={`header-bg absolute md:top-0 md:left-0 w-full ${show ? "h-[170%]" : "h-full"} bg-gradient-to-t from-transparent to-black/[.6] -z-10`}></div>
+      <div
+        className={`header-bg absolute md:top-0 md:left-0 w-full ${
+          show ? "h-[170%]" : "h-full"
+        } bg-gradient-to-t from-transparent to-black/[.6] -z-10`}
+      ></div>
       {/* bg overlay ends here */}
       {/* header container  */}
       <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         {/* header top */}
         <div
-          className={`header-first flex w-full flex-wrap py-[5px] md:py-0 items-center text-xs overflow-hidden transition-all ease-in-out ${
-            show ? "h-auto md:h-[46px]" : "h-0"
+          className={`header-first flex w-full flex-wrap py-[5px] md:py-0 items-center text-xs overflow-hidden transition-all duration-200 ease-out ${
+            show ? "h-auto md:h-[46px] opacity-100" : "h-0 opacity-0"
           }`}
         >
           <div className="header-first-icons m-[10px] md:m-0">
@@ -131,19 +149,19 @@ export default function Header({ menu, setMenu }) {
         <div className="divider opacity-20 bg-white w-full h-[1px]"></div>
         {/* divider ends here */}
         {/* header bottom start here */}
-        <div className="flex flex-col items-center justify-between w-full h-auto md:flex-row header-last">
+        <div className="flex pt-[3px] flex-col items-center justify-between w-full md:flex-row header-last">
           <div className="flex items-center self-start justify-center md:justify-start w-full md:w-[20%] lg:w-[20%]">
             <div className="relative my-5 md:my-0 logo-container group">
               <Link to="/">
                 <img
                   src="assets/mean3-logo.png"
-                  width={118}
-                  height={70}
+                  className="w-[118px] h-[70px]"
                   alt="Mean3 Logo"
                 />
                 <img
                   className="hidden md:block absolute left-0 top-[20%] opacity-0 cursor-pointer"
                   src="assets/mean3-logo.png"
+                  alt="Mean3 Logo"
                 ></img>
               </Link>
               {/* hover card */}
@@ -184,7 +202,7 @@ export default function Header({ menu, setMenu }) {
                       (child) => child.url === location.pathname
                     );
                   return (
-                    <li>
+                    <li key={parent.title}>
                       {!hasChildren ? (
                         <NavLink
                           to={parent.url}
@@ -206,7 +224,7 @@ export default function Header({ menu, setMenu }) {
                           <ul className="py-[6px] invisible group-hover:visible group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
                             {parent.children.map((child) => {
                               return (
-                                <li className="w-full">
+                                <li className="w-full" key={child.title}>
                                   <NavLink
                                     to={child.url}
                                     className={({ isActive }) =>
@@ -232,8 +250,8 @@ export default function Header({ menu, setMenu }) {
             </nav>
             {/* website menu ends here */}
             <Link
-              to="#"
-              className="px-[10px] relative font-sans top-2 md:top-0 left-0 py-[5px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col border-none"
+              to="/contact-us"
+              className="px-[10px] text-[11px] uppercase leading-[22px] rounded-sm relative font-sans top-2 md:top-0 left-0 pb-[5px] pt-[10px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col"
             >
               <strong className="text-[17px]">Free</strong>
               <span>Quote</span>
