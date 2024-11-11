@@ -46,7 +46,7 @@ export default function Section3({setIFrame}) {
                 </div>
                 <div className="h-[1px] w-full bg-black mb-[30px]"></div>
                 <div className="w-full">
-                  <p className="text-left text-[13px] font-sans text-[#535353]">
+                  <p className="text-left text-[13px] font-open text-[#535353]">
                     {item.imgText}
                   </p>
                 </div>

@@ -14,7 +14,7 @@ export default function Section3() {
         <h1 className="text-[26px] md:text-[34px] font-bold mb-5 md:mb-2">
           What does <span className="text-[#DA2128]">Mean</span> stands for?
         </h1>
-        <p className="mb-8 font-sans text-xs md:text-sm">
+        <p className="mb-8 text-xs font-open md:text-sm text-[#373737]">
           Mean3’s name is derived from a technology stack called ‘MeanStack’
           Which means
         </p>

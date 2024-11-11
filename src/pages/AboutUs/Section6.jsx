@@ -6,7 +6,7 @@ export default function Section6() {
     <div className="w-full Section6">
       <div className="flex flex-col items-center w-full text-center section6-container">
         <h1 className="text-[26px] md:text-[34px] font-bold mb-5 md:mb-2">Our Team</h1>
-        <p className="text-xs md:text-sm w-[90%] md:w-[55%] pb-[3%]">
+        <p className="text-xs md:text-sm w-[90%] md:w-[55%] pb-[3%] text-[#373737] font-open">
           At Mean3, you will work with a dedicated team of 100+ developers,
           digital marketers, and thought leaders who aspire to shape the future
           of Ecommerce globally.

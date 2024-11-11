@@ -8,7 +8,7 @@ export default function Section2() {
           What Client's Have To Say About Mean3
         </h1>
         <div className="h-[6px] mb-[30px] border-none mx-auto w-[12%] bg-[#da2128]"></div>
-        <p className="-mt-5 font-sans leading-10">
+        <p className="-mt-5 leading-10 font-open">
           We understand its difficult to select the most reliable agency for
           your first project. Also we understand the pain of moving to another
           agency after past bad experience. This is why we have curated our

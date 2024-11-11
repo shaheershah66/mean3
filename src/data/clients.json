@@ -37,6 +37,46 @@
     {
         "imgUrl": "assets/Zasko-Entertainment-1.jpg",
         "url": "https://zashko.com/"
+    },
+
+    {
+        "imgUrl": "assets/hyundai2.png",
+        "url": "https://www.hyundai-shf.com/"
+    },
+
+    {
+        "imgUrl": "assets/adam-clients.jpg",
+        "url": "https://www.adamjeeinsurance.com/"
+    },
+
+    {
+        "imgUrl": "assets/rider-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "/assets/carters-clients.jpg",
+        "url": "https://www.carters.com/"
+    },
+
+    {
+        "imgUrl": "assets/peugeot-clients.jpg",
+        "url": "https://www.peugeot.com/en/"
+    },
+
+    {
+        "imgUrl": "",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "",
+        "url": ""
     }
 ]
   

@@ -10,7 +10,7 @@ export default function Section5() {
             <h3 className="mb-[15px] text-3xl font-bold mt-[55px]">
               WE SERVE CLIENTS WORLDWIDE
             </h3>
-            <p className="text-[13px]">
+            <p className="text-[13px] font-open">
               We have served over 200+ clients internationally such as USA,
               Canada, Australia, Europe, MENA region & Asia.
             </p>
@@ -31,7 +31,7 @@ export default function Section5() {
           />
           <div className="flex flex-col text-left">
             <h3 className="mb-[15px] text-3xl font-bold mt-[55px]">INSTANT RESULTS</h3>
-            <p className="text-[13px]">
+            <p className="text-[13px] font-open">
               Completely predominate backend functionalities whereas
               professional convergence. Enthusiastically deploy multimedia based
               metrics with turnkey networks.

@@ -19,7 +19,7 @@ export default function Section4() {
           const text2 = item.hasOwnProperty("text2");
           const isTextOpen = textOpen[index];
           return (
-            <div key={item.name} className="flex font-sans text-[#535353] flex-col items-center w-full lg:w-1/3 md:px-[15px]">
+            <div key={item.name} className="flex font-open text-[#535353] flex-col items-center w-full lg:w-1/3 md:px-[15px]">
               <a
                 href={item.imgUrl}
                 className="block mb-5 img-container"

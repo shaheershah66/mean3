@@ -45,8 +45,8 @@ export default function Section4() {
     <div className="Section4 w-full py-[35px]">
       <div className="section3-container w-full xl:w-[1170px] mx-auto px-[15px]">
         <div className="text-center">
-          <h3 className="mb-2 text-2xl font-bold text-red-800 md:text-4xl">News</h3>
-          <h4 className="mb-2 text-base text-center text-black">
+          <h3 className="mb-2 text-2xl font-bold text-[#da2128] md:text-4xl uppercase">News</h3>
+          <h4 className="mb-2 text-base text-center">
             We’re proud to be consistently recognized as the fastest-growing
             technology company, earning a variety of awards and recognition in
             several key areas.
@@ -60,7 +60,7 @@ export default function Section4() {
               return (
                 <div key={index}>
                   <a
-                    className="inline-block px-4 cursor-pointer"
+                    className="inline-block px-4 cursor-pointer hover:text-[#cd2122]"
                     href={item.link}
                   >
                     <img
@@ -69,7 +69,7 @@ export default function Section4() {
                       src={item.image}
                       alt={item.title}
                     />
-                    <p className="text-lg leading-5 mt-[10px]">
+                    <p className="text-lg font-open font-[900] leading-5 mt-[10px]">
                       <strong>{item.title}</strong>
                     </p>
                   </a>

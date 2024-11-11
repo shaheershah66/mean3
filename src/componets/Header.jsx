@@ -251,7 +251,7 @@ export default function Header({ menu, setMenu }) {
             {/* website menu ends here */}
             <Link
               to="/contact-us"
-              className="px-[10px] text-[11px] uppercase leading-[22px] rounded-sm relative font-sans top-2 md:top-0 left-0 pb-[5px] pt-[10px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col"
+              className="px-[10px] text-[11px] uppercase leading-[22px] rounded-sm relative font-open top-2 md:top-0 left-0 pb-[5px] pt-[10px] bg-[#cd2122] font-bold cursor-pointer hover:bg-white hover:text-black flex flex-col"
             >
               <strong className="text-[17px]">Free</strong>
               <span>Quote</span>

@@ -14,7 +14,7 @@ export default function Section2() {
         </div>
         <div className="w-full text-center md:text-left pt-[70px] md:w-[50%] md:pt-[34px]">
           <h1 className=" text-[26px] md:text-[34px] font-bold mb-5 md:mb-2">About Us</h1>
-          <p className="pb-5 text-xs md:text-sm">
+          <p className="pb-5 text-xs md:text-sm font-open text-[#373737]">
             Mean3 is a distinguished software house and marketing agency that
             came into being in 2016 under the visionary leadership of Abdul Hadi
             Siraj. Our aim is to revolutionize businesses worldwide, propelling
@@ -25,7 +25,7 @@ export default function Section2() {
             more than 100 experts with offices strategically situated in New
             York and Pakistan.
           </p>
-          <p className="pb-5 text-xs md:text-sm">
+          <p className="pb-5 text-xs md:text-sm font-open text-[#373737]">
             Our portfolio boasts an array of notable clients, and we take pride
             in having worked with prominent names like Now and Forever,Zashko
             INC, e-commerce giants such as Carters, and renowned automobile

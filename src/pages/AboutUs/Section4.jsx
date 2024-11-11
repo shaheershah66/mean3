@@ -8,7 +8,7 @@ export default function Section4() {
           <h1 className="text-[26px] mb-5 md:mb-0 md:text-[34px] font-bold text-[#DA2128] pb-2">
             Our Mission
           </h1>
-          <p className="mb-5 smd:mb-0 pb-[3%] text-xs md:text-sm mx-auto text-[#373737] leading-5">
+          <p className="mb-5 smd:mb-0 pb-[3%] font-open text-xs md:text-sm mx-auto text-[#373737] leading-5">
             Our mission is to empower businesses worldwide to reach their full
             potential by providing exceptional IT, E-commerce solutions, and
             digital services. We are committed to creating cutting-edge
@@ -24,7 +24,7 @@ export default function Section4() {
           <h1 className="text-[26px] mb-5 md:mb-0 md:text-[34px] font-bold text-[#DA2128] pb-2">
             Our Vision
           </h1>
-          <p className="mb-5 smd:mb-0 pb-[3%] text-xs md:text-sm mx-auto text-[#373737] leading-5">
+          <p className="mb-5 smd:mb-0 pb-[3%] text-xs md:text-sm mx-auto font-open text-[#373737] leading-5">
             Our vision is to build long-lasting client partnerships by providing
             a comprehensive and integrated solution to fuel the success of their
             businesses.

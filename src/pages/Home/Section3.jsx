@@ -5,10 +5,10 @@ export default function Section3() {
   const [servicesData, setServicesData] = useState(servicesJson);
 
   return (
-    <div className="Section3 w-full py-[35px]">
-      <div className="section3-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px] text-red-800">
+    <div className="Section3 w-full py-[35px] font-open">
+      <div className="section3-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         <div className="py-[35px] text-center">
-          <h3 className="mb-2 text-2xl font-bold md:text-4xl">OUR SERVICES</h3>
+          <h3 className="mb-2 text-2xl font-bold font-mont md:text-4xl text-[#da2128]">OUR SERVICES</h3>
           <h4 className="mb-2 text-lg text-black">
             Choose just the service you need, or build an all-inclusive package.
           </h4>
@@ -29,7 +29,7 @@ export default function Section3() {
                     className="text-left"
                   />
                 </div>
-                <h3 className="py-[15px] text-[22px] lg:text-base text-black capitalize">
+                <h3 className="py-[15px] font-[600] text-[22px] lg:text-base text-[#323232] capitalize">
                   {service.title}
                 </h3>
                 <ul className="absolute left-0 right-0 bg-white z-10 hidden group-hover:block rounded-b-md shadow-lg p-[30px] lg:p-[14px]">
@@ -40,7 +40,7 @@ export default function Section3() {
                         className="w-full border-t-[1px] border-solid border-[#eeee] "
                       >
                         <a
-                          className="inline-block w-full capitalize text-red-800 py-[10px]"
+                          className="inline-block text-[13px] w-full uppercase text-[#cd2122] py-[10px]"
                           href={link.link}
                         >
                           {link.linkName}
