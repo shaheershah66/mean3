@@ -1,46 +1,46 @@
 [
     {
-        "imgUrl": "assets/habitt.png",
+        "imgUrl": "assets/habitt-clients.png",
         "url": "https://habitt.com/"
     },
 
     {
-        "imgUrl": "assets/tapal.jpg",
+        "imgUrl": "assets/tapal-clients.jpg",
         "url": "https://tapaltea.com/"
     },
 
     {
-        "imgUrl": "assets/forever.jpg",
+        "imgUrl": "assets/forever-clients.jpg",
         "url": "https://nowandforever.com/"
     },
 
     {
-        "imgUrl": "assets/candylandlogo-1.jpg",
+        "imgUrl": "assets/candyland-clients.jpg",
         "url": "https://candyland.com.pk/"
     },
 
     {
-        "imgUrl": "assets/grocerapp-laziza-5ecfad7a0681e.jpg",
+        "imgUrl": "assets/laziza-clients.jpg",
         "url": "https://www.lazizafoods.com/"
     },
 
     {
-        "imgUrl": "assets/21-1.jpg",
+        "imgUrl": "assets/mantra-clients.jpg",
         "url": "https://mantra.com.pk/"
     },
 
     {
-        "imgUrl": "assets/cambridge.jpg",
+        "imgUrl": "assets/cambridge-clients.jpg",
         "url": "https://thecambridgeshop.com/"
     },
 
     {
-        "imgUrl": "assets/Zasko-Entertainment-1.jpg",
+        "imgUrl": "assets/zasko-entertainment-clients.jpg",
         "url": "https://zashko.com/"
     },
 
     {
-        "imgUrl": "assets/hyundai2.png",
+        "imgUrl": "assets/hyundai-clients.png",
         "url": "https://www.hyundai-shf.com/"
     },
 
@@ -65,18 +65,873 @@
     },
 
     {
-        "imgUrl": "",
+        "imgUrl": "assets/diners-clients.jpg",
+        "url": "https://diners.com.pk/"
+    },
+
+    {
+        "imgUrl": "assets/kia-clients.jpg",
+        "url": "https://kia-luckymotorcorp.com/"
+    },
+
+    {
+        "imgUrl": "assets/MTJ-clients.png",
+        "url": "https://mtjonline.com/"
+    },
+
+    {
+        "imgUrl": "assets/senior-clients.jpg",
         "url": ""
     },
 
     {
-        "imgUrl": "",
+        "imgUrl": "assets/unity-clients.jpg",
+        "url": "https://unityretail.com/"
+    },
+
+    {
+        "imgUrl": "assets/royal-clients.jpg",
+        "url": "https://royalhouseware.com/"
+    },
+
+    {
+        "imgUrl": "assets/zeen-clients.jpg",
+        "url": "https://zeenwoman.com/"
+    },
+
+    {
+        "imgUrl": "assets/wd-clients.jpg",
+        "url": "https://whiteduckoutdoors.com/"
+    },
+
+    {
+        "imgUrl": "assets/texas-for-clients.jpg",
+        "url": "https://texasforeverbarandgrill.com/"
+    },
+
+    {
+        "imgUrl": "assets/vital-clients.jpg",
+        "url": "https://vitalshop.pk/"
+    },
+
+    {
+        "imgUrl": "assets/physalia-clients.jpg",
         "url": ""
     },
 
     {
-        "imgUrl": "",
+        "imgUrl": "assets/misbah-clients.jpg",
+        "url": "https://www.masarratmakeup.com/"
+    },
+
+    {
+        "imgUrl": "assets/manto-clients.jpg",
+        "url": "https://www.shopmanto.com/"
+    },
+
+    {
+        "imgUrl": "assets/mbg-clients.png",
         "url": ""
+    },
+
+    {
+        "imgUrl": "assets/french-clients.jpg",
+        "url": "https://frenchemporio.online/"
+    },
+
+    {
+        "imgUrl": "assets/interior-clients.jpg",
+        "url": "https://www.interiornet.co.uk/"
+    },
+
+    {
+        "imgUrl": "assets/sohaye-clients.jpg",
+        "url": "https://diners.com.pk/pages/chifli-catalogue"
+    },
+
+    {
+        "imgUrl": "assets/mayas-clients.jpg",
+        "url": "https://mayascloset.pk/"
+    },
+
+    {
+        "imgUrl": "assets/walk-clients.jpg",
+        "url": "https://walkeaze.com/"
+    },
+
+    {
+        "imgUrl": "assets/gruber-logistics-clients.jpg",
+        "url": "https://www.gruber-logistics.com/en/"
+    },
+
+    {
+        "imgUrl": "assets/heritage-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/versus-clients.jpg",
+        "url": "https://versusforher.com/"
+    },
+
+    {
+        "imgUrl": "assets/stallion-clients.jpg",
+        "url": "https://www.stalliondeliveries.com/"
+    },
+
+    {
+        "imgUrl": "assets/delta-clients.jpg",
+        "url": "https://deltapower.com.pk/"
+    },
+
+    {
+        "imgUrl": "assets/safepay-clients.jpg",
+        "url": "https://www.getsafepay.pk/"
+    },
+
+    {
+        "imgUrl": "assets/chase-clients.jpg",
+        "url": "https://chasemycloud.com/"
+    },
+
+    {
+        "imgUrl": "assets/go-holidays-clients.jpg",
+        "url": "https://goholidays.ae/"
+    },
+
+    {
+        "imgUrl": "assets/elite-clients.jpg",
+        "url": "https://e-lite.com.pk/"
+    },
+
+    {
+        "imgUrl": "assets/ismail-clients.jpg",
+        "url": "https://www.ismailindustries.com.pk/"
+    },
+
+    {
+        "imgUrl": "assets/deals-direct-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/nizam-clients.jpg",
+        "url": "https://nizamworkwear.com/"
+    },
+
+    {
+        "imgUrl": "assets/nine-clients.jpg",
+        "url": "https://ninefigures.com/"
+    },
+
+    {
+        "imgUrl": "assets/montivo-clients.jpg",
+        "url": "https://montivo.pk/"
+    },
+
+    {
+        "imgUrl": "assets/diverse-clients.jpg",
+        "url": "https://thediversestore.com/"
+    },
+
+    {
+        "imgUrl": "assets/sahara-clients.jpg",
+        "url": "http://saharatamiraat.com/index.php"
+    },
+
+    {
+        "imgUrl": "assets/neem-pro-clients.png",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/elite-cig-clients.jpg",
+        "url": "https://e-litecigs.com/"
+    },
+
+    {
+        "imgUrl": "assets/clothing-call-clients.jpg",
+        "url": "https://ccstore.pk/"
+    },
+
+    {
+        "imgUrl": "assets/lala-clients.jpg",
+        "url": "https://houseoflala.com/"
+    },
+
+    {
+        "imgUrl": "assets/kesori-clients.jpg",
+        "url": "https://kesori.com/"
+    },
+
+    {
+        "imgUrl": "assets/shhilon-clients.jpg",
+        "url": "https://shhilon.com/"
+    },
+
+    {
+        "imgUrl": "assets/bumble-clients.jpg",
+        "url": "https://www.bumbletowels.com/"
+    },
+
+    {
+        "imgUrl": "assets/mizaj-clients.jpg",
+        "url": "https://mizajstore.com/"
+    },
+
+    {
+        "imgUrl": "assets/naqsh-clients.jpg",
+        "url": "https://naqshpk.com/"
+    },
+
+    {
+        "imgUrl": "assets/skincare-clients.jpg",
+        "url": "https://skincarepakistan.com/"
+    },
+
+    {
+        "imgUrl": "assets/bamboo-clients.jpg",
+        "url": "https://bamboobicycleclub.org/"
+    },
+
+    {
+        "imgUrl": "assets/chester-clients.jpg",
+        "url": "https://chesterbernard.com/"
+    },
+
+    {
+        "imgUrl": "assets/ktrade.jpg",
+        "url": "https://kasb.com/"
+    },
+
+    {
+        "imgUrl": "assets/motiza-clients.png",
+        "url": "https://motiza.co/"
+    },
+
+    {
+        "imgUrl": "assets/appollo-clients.jpg",
+        "url": "https://appollostore.com/"
+    },
+
+    {
+        "imgUrl": "assets/scrubs-clients.jpg",
+        "url": "https://www.scrubsuniforms.com/"
+    },
+
+    {
+        "imgUrl": "assets/wardrobe-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/ezmakaan-clients.jpg",
+        "url": "https://ezmakaan.com/"
+    },
+
+    {
+        "imgUrl": "assets/ctb-clients.jpg",
+        "url": "https://ctbconstruction.ca/fr"
+    },
+
+    {
+        "imgUrl": "assets/urban-clients.jpg",
+        "url": "https://urban-luxury.com/"
+    },
+
+    {
+        "imgUrl": "assets/f-golf-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/islamic-design-clients.jpg",
+        "url": "http://islamicdesignhouse.com/"
+    },
+
+    {
+        "imgUrl": "assets/akhtar-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/khawar-clients.jpg",
+        "url": "https://khawarsons.com/"
+    },
+
+    {
+        "imgUrl": "assets/cmc-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/dhoraji-clients.jpg",
+        "url": "https://dhorajiassociation.org/"
+    },
+
+    {
+        "imgUrl": "assets/sumaira-clients.jpg",
+        "url": "https://sumairakhananistudio.com/"
+    },
+
+    {
+        "imgUrl": "assets/global-sourcing-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/glamorous-clients.jpg",
+        "url": "https://chaprabeautyshop.com/"
+    },
+
+    {
+        "imgUrl": "assets/neuskine-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/vape-buzz-clients.jpg",
+        "url": "https://vapebuzz.pk/"
+    },
+
+    {
+        "imgUrl": "assets/black-n-white-clients.jpg",
+        "url": "https://www.blackenwhiteofficial.com/"
+    },
+
+    {
+        "imgUrl": "assets/khatir-clients.jpg",
+        "url": "https://ibnkathir.ca/"
+    },
+
+    {
+        "imgUrl": "assets/sync-clients.png",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/infinity-bar-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/glow-clients.jpg",
+        "url": "https://glowlights.com.pk/"
+    },
+
+    {
+        "imgUrl": "assets/vape-bazaar-clients.jpg",
+        "url": "https://vapebazaar.pk/"
+    },
+
+    {
+        "imgUrl": "assets/dat-clients.jpg",
+        "url": "https://digitalalliedtheatres.com/"
+    },
+
+    {
+        "imgUrl": "assets/silk-clients.jpg",
+        "url": "https://silkavenue.pk/"
+    },
+
+    {
+        "imgUrl": "assets/qarido-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/vaporium-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/luxure-clients.jpg",
+        "url": "https://theluxure.com/"
+    },
+
+    {
+        "imgUrl": "assets/mag-leather-clients.jpg",
+        "url": "https://magleather.com/"
+    },
+
+    {
+        "imgUrl": "assets/alwanees-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/ghani-bahi-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/gyro-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/patels-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/ls-bags-clients.jpg",
+        "url": "https://www.lsbags.co.uk/"
+    },
+
+    {
+        "imgUrl": "assets/lm-clients.jpg",
+        "url": "https://leathermadness.com/"
+    },
+
+    {
+        "imgUrl": "assets/crown-radiator-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/kirv-clients.jpg",
+        "url": "https://kirv.com/"
+    },
+
+    {
+        "imgUrl": "assets/miri-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/feliz-clients.jpg",
+        "url": "https://www.felizpakistan.com/"
+    },
+
+    {
+        "imgUrl": "assets/sushi-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/pr-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/the-class-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/search-my-driver-clients.png",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/vr-clients.jpg",
+        "url": "https://victoria-road.com/"
+    },
+
+    {
+        "imgUrl": "assets/extreme-sports-clients.jpg",
+        "url": "https://www.extreme.com.kw/"
+    },
+
+    {
+        "imgUrl": "assets/zettrobe-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/bakeware-clients.jpg",
+        "url": "https://bakeware.pk/"
+    },
+
+    {
+        "imgUrl": "assets/gt-clients.jpg",
+        "url": "https://goldlinetextile.com/"
+    },
+
+    {
+        "imgUrl": "assets/ae-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/smartway-clients.jpg",
+        "url": "https://www.smartwayconnect.com/lander"
+    },
+
+    {
+        "imgUrl": "assets/jac-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/kidskei-clients.jpg",
+        "url": "https://kidskei.com/"
+    },
+
+    {
+        "imgUrl": "assets/bpo-clients.jpg",
+        "url": "https://brandoutletpakistan.com/"
+    },
+
+    {
+        "imgUrl": "assets/brand-box-clients.jpg",
+        "url": "https://brandsbox.pk/"
+    },
+
+    {
+        "imgUrl": "assets/little-shark-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/textas-ex-clients.jpg",
+        "url": "dgrill.com"
+    },
+
+    {
+        "imgUrl": "assets/dua-associate-clients.jpg",
+        "url": "https://www.duaassociates.com/"
+    },
+
+    {
+        "imgUrl": "assets/soorat-clients.jpg",
+        "url": "https://thesoorat.com/"
+    },
+
+    {
+        "imgUrl": "assets/ca-clients.jpg",
+        "url": "https://cionarmada.com/"
+    },
+
+    {
+        "imgUrl": "assets/ezoom-clients.jpg",
+        "url": "https://ezoom.pk/cgi-sys/suspendedpage.cgi"
+    },
+
+    {
+        "imgUrl": "assets/pathan-run-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/tru-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/mech-art-clients.jpg",
+        "url": "http://mechart.pk/"
+    },
+
+    {
+        "imgUrl": "assets/sk-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/one-love-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/absolute-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/blogthisout-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/aas-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/sarim-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/zs-clients.jpg",
+        "url": "https://zsgamings.com/"
+    },
+
+    {
+        "imgUrl": "assets/amartllis-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/rk-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/fpo-clients.png",
+        "url": "https://factoryoutletpakistan.com/"
+    },
+
+    {
+        "imgUrl": "assets/vapeology-clients.jpg",
+        "url": "https://vapeology.pk/"
+    },
+
+    {
+        "imgUrl": "assets/tg-clients.jpg",
+        "url": "https://tameerghar.com/"
+    },
+
+    {
+        "imgUrl": "assets/sj-clients.jpg",
+        "url": "https://www.seraaljewels.com/"
+    },
+
+    {
+        "imgUrl": "assets/zashkonic-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/elephant-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/saprah-clients.jpg",
+        "url": "http://www.saprah.com/"
+    },
+
+    {
+        "imgUrl": "assets/monde-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/growth-hopper-clients.jpg",
+        "url": "https://growthhopper.com/"
+    },
+
+    {
+        "imgUrl": "assets/dsixty4-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/zeeshon-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/event-clients.jpg",
+        "url": "https://www.the-eventalist.com/"
+    },
+
+    {
+        "imgUrl": "assets/premium-clients.jpg",
+        "url": "https://premiumwear.pk/"
+    },
+
+    {
+        "imgUrl": "assets/na-band-na-barati-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/traviour-clients.jpg",
+        "url": "https://www.traviour.com/"
+    },
+
+    {
+        "imgUrl": "assets/nova-clients.jpg",
+        "url": "https://optinova.com/"
+    },
+
+    {
+        "imgUrl": "assets/biryani-on-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/sb-clients.jpg",
+        "url": "https://sleepingbeautypk.com/"
+    },
+
+    {
+        "imgUrl": "assets/desi-wedding-clients.jpg",
+        "url": "http://www.desiweddingdiaries.pk/"
+    },
+
+    {
+        "imgUrl": "assets/lsm-clients.jpg",
+        "url": "https://lakhanyonline.com/"
+    },
+
+    {
+        "imgUrl": "assets/global-text-clients.jpg",
+        "url": "https://www.globtex.net/"
+    },
+
+    {
+        "imgUrl": "assets/amour-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/smoke-roll-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/bijlipani-clients.jpg",
+        "url": "https://bijlipani.com/"
+    },
+
+    {
+        "imgUrl": "assets/bi-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/leatherohlics-clients.jpg",
+        "url": "https://leatherholics.com/"
+    },
+
+    {
+        "imgUrl": "assets/consult-group-clients.jpg",
+        "url": "https://www.firstconsultinggrp.com/"
+    },
+
+    {
+        "imgUrl": "assets/fortune-clients.jpg",
+        "url": "https://www.fortune-travel.com/"
+    },
+
+    {
+        "imgUrl": "assets/vital-fashion-clients.jpg",
+        "url": "http://www.vitalfashionsonline.com/"
+    },
+
+    {
+        "imgUrl": "assets/winone-clients.jpg",
+        "url": "http://www.winone.com/"
+    },
+
+    {
+        "imgUrl": "assets/khalo-clients.jpg",
+        "url": "https://khalopk.business.site/"
+    },
+
+    {
+        "imgUrl": "assets/vigilink-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/lelusso-clients.jpg",
+        "url": "https://lelusso.shop/"
+    },
+
+    {
+        "imgUrl": "assets/vape-sultan-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/shahnazanis-clients.jpg",
+        "url": "https://shahnazanis.com/"
+    },
+
+    {
+        "imgUrl": "assets/vapeon-clients.jpg",
+        "url": "https://vapeonhai.com/"
+    },
+    
+    {
+        "imgUrl": "assets/roomfix-clients.jpg",
+        "url": "https://roomfix.uk/"
+    },
+
+    {
+        "imgUrl": "assets/pivot-clients.jpg",
+        "url": "https://www.pivotpointpakistan.com/"
+    },
+
+    {
+        "imgUrl": "assets/rah-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/solway-clients.jpg",
+        "url": ""
+    },
+    
+    {
+        "imgUrl": "assets/paramount-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/aces-clients.jpg",
+        "url": "http://www.acesexpert.com/"
+    },
+
+    {
+        "imgUrl": "assets/madina-clients.jpg",
+        "url": "https://madinaprinters.com/"
+    },
+
+    {
+        "imgUrl": "assets/lychee-clients.jpg",
+        "url": ""
+    },
+    
+    {
+        "imgUrl": "assets/ak-academy-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/tkg-clients.jpg",
+        "url": "https://thatkarachigirl.blog/"
+    },
+
+    {
+        "imgUrl": "assets/rickshaw-run-clients.jpg",
+        "url": ""
+    },
+
+    {
+        "imgUrl": "assets/munasib-clients.jpg",
+        "url": "https://munasibstore.com/"
+    },
+    
+    {
+        "imgUrl": "assets/joon-clients.jpg",
+        "url": "https://rimshashaikhani.com/"
+    },
+
+    {
+        "imgUrl": "assets/naztaq-clients.jpg",
+        "url": "https://naztaq.com/"
+    },
+
+    {
+        "imgUrl": "assets/anchorage-clients.jpg",
+        "url": "https://www.facebook.com/anchoragekarachi?mibextid=D4KYlr"
+    },
+
+    {
+        "imgUrl": "assets/chief-clients.jpg",
+        "url": "https://chiefapparel.pk/"
+    },
+
+    {
+        "imgUrl": "assets/oxford-republic-clients.jpg",
+        "url": "https://theoxfordrepublic.com/"
     }
 ]
   

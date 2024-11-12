@@ -1,5 +1,6 @@
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import SliderBtn from "../../componets/SliderBtn"; // Ensure correct path
+import SliderBtn from "../../componets/SliderBtn";
 import sliderVideoJson from "../../data/sliderVideo.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,9 +8,35 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Section6() {
   const sliderData = sliderVideoJson;
 
+  const videoRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        console.log(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }, {
+      threshold: 0.5,
+    });
+
+    videoRefs.current.forEach((video) => {
+      observer.observe(video);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
@@ -24,14 +51,14 @@ export default function Section6() {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
-          arrows: false
-        }
+          arrows: false,
+        },
       },
-    ]
+    ],
   };
 
   return (
-    <div className="Section6 w-full text-white pt-28 pb-[45px]">
+    <div className="Section6 w-full text-white pt-20 pb-[45px]">
       <div className="w-full section6-container">
         <h3 className="text-2xl md:text-4xl font-bold mb-10 text-[#da2128] text-center">
           CLIENT TESTIMONIALS
@@ -41,11 +68,12 @@ export default function Section6() {
             <div key={index}>
               <div className="w-full xl:w-[1200px] h-[190px] md:h-auto mx-auto">
                 <video
+                  ref={(el) => videoRefs.current[index] = el}
                   className="object-cover w-full h-full"
                   src={item.url}
-                  controls
-                  autoPlay
-                  muted
+                  controls={true}
+                  muted={true}
+                  preload="auto"
                 />
               </div>
             </div>
@@ -55,3 +83,4 @@ export default function Section6() {
     </div>
   );
 }
+

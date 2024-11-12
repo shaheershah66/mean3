@@ -79,7 +79,7 @@ export default function Header({ menu, setMenu }) {
                       onClick={() => handleSubMenu(parentIndex)}
                       className={`${
                         isActive ? "text-[#cd2122]" : "text-black"
-                      } cursor-pointer text-lg uppercase leading-[1.6] py-[0.17em]`}
+                      } text-lg uppercase leading-[1.6] py-[0.17em]`}
                     >
                       {parent.title}
                     </span>

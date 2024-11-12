@@ -1,11 +1,10 @@
-import { useState } from "react";
 import servicesJson from "../../data/services.json";
 
 export default function Section3() {
-  const [servicesData, setServicesData] = useState(servicesJson);
+  const servicesData = servicesJson;
 
   return (
-    <div className="Section3 w-full py-[35px] font-open">
+    <div className="Section3 relative w-full pt-[35px] pb-[65px] font-open">
       <div className="section3-container w-full md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         <div className="py-[35px] text-center">
           <h3 className="mb-2 text-2xl font-bold font-mont md:text-4xl text-[#da2128]">OUR SERVICES</h3>
@@ -29,7 +28,7 @@ export default function Section3() {
                     className="text-left"
                   />
                 </div>
-                <h3 className="py-[15px] font-[600] text-[22px] lg:text-base text-[#323232] capitalize">
+                <h3 className="py-[15px] leading-[1.3] font-[600] text-[22px] lg:text-base text-[#323232] capitalize">
                   {service.title}
                 </h3>
                 <ul className="absolute left-0 right-0 bg-white z-10 hidden group-hover:block rounded-b-md shadow-lg p-[30px] lg:p-[14px]">
@@ -54,7 +53,7 @@ export default function Section3() {
           })}
         </div>
       </div>
-      <div className="w-full h-10 shadow-lg"></div>
+      <div style={{background: "radial-gradient(ellipse at 50% 0, rgba(0, 0, 0, .3) 0, transparent 70%)"}} className="absolute w-full z-[1] -bottom-[10px] left-0 block h-[10px] opacity-60"></div>
     </div>
   );
 }

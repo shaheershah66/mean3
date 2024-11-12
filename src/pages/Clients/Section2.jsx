@@ -14,13 +14,28 @@ export default function Section2() {
           {clientsData.map(({ imgUrl, url }) => {
             return (
               <div className="box w-full min-[501px]:w-[50%] min-[801px]:w-[33.33%] min-[1101px]:w-[25%] px-[15px] mb-[30px]">
-                <a href={url}>
-                  <img
-                    className="block w-full h-[170px] shadow-[0_14px_28px_rgba(0,0,0,0.25),_0_10px_10px_rgba(0,0,0,0.22)]"
-                    src={imgUrl}
-                    alt="Clients Logos"
-                  ></img>
-                </a>
+                {url ? (
+                  <a
+                    className="block w-full"
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      className="block w-auto mx-auto min-[501px]:w-full h-[170px] shadow-[0_14px_28px_rgba(0,0,0,0.25),_0_10px_10px_rgba(0,0,0,0.22)]"
+                      src={imgUrl}
+                      alt="Clients Logos"
+                    ></img>
+                  </a>
+                ) : (
+                  <div className="w-full">
+                    <img
+                      className="block w-auto mx-auto min-[501px]:w-full h-[170px] shadow-[0_14px_28px_rgba(0,0,0,0.25),_0_10px_10px_rgba(0,0,0,0.22)]"
+                      src={imgUrl}
+                      alt="Clients Logos"
+                    ></img>
+                  </div>
+                )}
               </div>
             );
           })}
