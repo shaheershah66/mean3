@@ -13,7 +13,7 @@ export default function Section2() {
         <div className="flex flex-wrap justify-center min-[501px]:justify-start w-full">
           {clientsData.map(({ imgUrl, url }) => {
             return (
-              <div className="box w-full min-[501px]:w-[50%] min-[801px]:w-[33.33%] min-[1101px]:w-[25%] px-[15px] mb-[30px]">
+              <div className="box w-auto min-[501px]:w-[50%] min-[801px]:w-[33.33%] min-[1101px]:w-[25%] px-[15px] mb-[30px]">
                 {url ? (
                   <a
                     className="block w-full"
