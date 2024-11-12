@@ -49,9 +49,11 @@ export default function Section6() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
+          autoplay: false,
           dots: false,
           arrows: false,
+          cssEase: "linear",
         },
       },
     ],
