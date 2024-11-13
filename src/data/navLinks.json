@@ -6,7 +6,182 @@
 
   {
     "title": "services",
-    "url": "/services"
+    "children": [
+      {
+        "title": "ecommerce developement",
+        "links": [
+          {
+            "title": "shopify",
+            "url": "/ecommerce-shopify"
+          },
+
+          {
+            "title": "shopify plus",
+            "url": "/shopify-plus"
+          },
+
+          {
+            "title": "magneto",
+            "url": "/magneto-development"
+          },
+
+          {
+            "title": "bigcommerce",
+            "url": "/bigcommerce-development"
+          },
+
+          {
+            "title": "woocommerce",
+            "url": "/woocommerce-development"
+          }
+        ]
+      },
+
+      {
+        "title": "web / app development",
+        "links": [
+          {
+            "title": "web development",
+            "url": "/web-development-designing"
+          },
+
+          {
+            "title": "wordpress",
+            "url": "/wordpress-development"
+          },
+
+          {
+            "title": "mobile app development",
+            "url": "/mobile-application-development"
+          },
+
+          {
+            "title": "game design & development",
+            "url": "/game-design-and-development"
+          },
+
+          {
+            "title": "erp",
+            "url": "/erp"
+          },
+
+          {
+            "title": "hosting & cloud services",
+            "url": "/hosting-cloud-services"
+          },
+
+          {
+            "title": "plugin & app development",
+            "url": "/custom-plugin-app-development"
+          }
+        ]
+      },
+
+      {
+        "title": "digital marketing",
+        "links": [
+          {
+            "title": "performance marketing",
+            "url": "/performance-marketing"
+          },
+
+          {
+            "title": "tiktok-marketing",
+            "url": "/tiktok"
+          },
+
+          {
+            "title": "seo",
+            "url": "/seo"
+          },
+
+          {
+            "title": "influencer marketing",
+            "url": "/influencer-marketing"
+          },
+
+          {
+            "title": "social media marketing",
+            "url": "/digital-marketing"
+          },
+
+          {
+            "title": "email marketing",
+            "url": "/email-marketing"
+          },
+
+          {
+            "title": "conversion rate optimization",
+            "url": "/digital-marketing"
+          }
+        ]
+      },
+
+      {
+        "title": "graphic designing",
+        "links": [
+          {
+            "title": "logo & branding",
+            "url": "/logo-branding"
+          },
+
+          {
+            "title": "print design & service",
+            "url": "/graphic-designings"
+          },
+
+          {
+            "title": "product & merchandise",
+            "url": "/product-merchandise"
+          },
+
+          {
+            "title": "banners & advertisement",
+            "url": "/graphic-designings"
+          },
+
+          {
+            "title": "ui/ux design",
+            "url": "/ui-ux-design"
+          }
+        ]
+      },
+
+      {
+        "title": "staff augmentation services",
+        "links": [
+          {
+            "title": "staff augmentation services",
+            "url": "/staff-augmentation-service"
+          },
+
+          {
+            "title": "project outsourcing",
+            "url": "/project-outsourcing"
+          }
+        ]
+      },
+
+      {
+        "title": "other",
+        "links": [
+          {
+            "title": "cctv surveillance",
+            "url": "/cctv"
+          },
+
+          {
+            "title": "ai in ecommerce",
+            "url": "/ai-in-ecommerce"
+          },
+
+          {
+            "title": "virtual assistant",
+            "url": "/virtual-assistant"
+          }
+        ]
+      }
+    ]
   },
 
   {

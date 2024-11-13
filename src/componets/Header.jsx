@@ -124,7 +124,7 @@ export default function Header({ menu, setMenu }) {
       ></div>
       {/* bg overlay ends here */}
       {/* header container  */}
-      <div className="header-container md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
+      <div className="header-container relative md:w-[750px] lg:w-[970px] xl:w-[1170px] mx-auto px-[15px]">
         {/* header top */}
         <div
           className={`header-first flex w-full flex-wrap py-[5px] md:py-0 items-center text-xs overflow-hidden transition-all duration-200 ease-out ${
@@ -149,9 +149,9 @@ export default function Header({ menu, setMenu }) {
         <div className="divider opacity-20 bg-white w-full h-[1px]"></div>
         {/* divider ends here */}
         {/* header bottom start here */}
-        <div className="flex pt-[3px] flex-col items-center justify-between w-full md:flex-row header-last">
+        <div className="relative flex flex-col items-center justify-between w-full md:flex-row header-last">
           <div className="flex items-center self-start justify-center md:justify-start w-full md:w-[20%] lg:w-[20%]">
-            <div className="relative my-5 md:my-0 logo-container group">
+            <div className="relative my-5 md:my-0 md:mt-[3px] logo-container group">
               <Link to="/">
                 <img
                   src="assets/mean3-logo.png"
@@ -214,14 +214,14 @@ export default function Header({ menu, setMenu }) {
                         >
                           {parent.title}
                         </NavLink>
-                      ) : (
+                      ) : parent.title === "portfolio" ? (
                         <span
                           className={`${
                             isActive ? "bg-[#cd2122]" : ""
                           } text-xs rounded-sm before:rounded-sm uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}
                         >
                           {parent.title}
-                          <ul className="py-[6px] invisible group-hover:visible group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
+                          <ul className="py-[6px] invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
                             {parent.children.map((child) => {
                               return (
                                 <li className="w-full" key={child.title}>
@@ -241,6 +241,47 @@ export default function Header({ menu, setMenu }) {
                               );
                             })}
                           </ul>
+                        </span>
+                      ) : (
+                        <span
+                          className={`${
+                            isActive ? "bg-[#cd2122]" : ""
+                          } text-xs rounded-sm before:rounded-sm uppercase relative group py-2 mx-[2px] px-3 z-20 cursor-text before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}
+                        >
+                          {parent.title}
+                          {/* mega container */}
+                          <div className="z-20 leading-[14px] flex flex-wrap lg:-left-[257px] xl:-left-[297px] mega-container invisible opacity-0 group-hover:opacity-100 group-hover:visible py-5 group-hover:top-full transition-all text-black lg:w-[940px] xl:w-[1140px] border-[1px_solid_hsla(0,0%,100%,.8)] top-[120%] absolute translate-y-2 bg-[hsla(0,0%,96%,.95)] rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)]">
+                            {parent.children.map((item) => {
+                              return (
+                                <ul className="w-1/4 px-[15px] pb-[20px]">
+                                  <li className="w-full">
+                                    <span className="block text-sm border-b-solid border-b border-black/[0.1] py-[12px] mb-[15px] font-[600] uppercase">{item.title}</span>
+                                    <ul className="w-full">
+                                      {item.links.map((item2) => {
+                                        return (
+                                          <li className="w-full">
+                                            <NavLink
+                                              to={item2.url}
+                                              className={({ isActive }) =>
+                                                `inline-block w-full py-[10px] relative before:content-[''] before:bg-[#cd2122] before:bottom-0 before:absolute before:transition-all before:left-0 hover:before:w-full before:w-0 before:h-[2px] ${
+                                                  isActive
+                                                    ? "before:w-full"
+                                                    : ""
+                                                }`
+                                              }
+                                            >
+                                              {item2.title}
+                                            </NavLink>
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  </li>
+                                </ul>
+                              );
+                            })}
+                          </div>
+                          {/* mega container ends here */}
                         </span>
                       )}
                     </li>

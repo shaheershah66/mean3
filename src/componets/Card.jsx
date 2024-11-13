@@ -2,7 +2,7 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 export default function Card() {
   return (
-    <div className="absolute hidden md:block top-full font-open left-0 w-[440px] shadow-2xl bg-[#cd2122] z-10  pt-[30px] pb-[25px] px-5 mt-[10px] text-xs leading-5 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none">
+    <div className="absolute hidden md:block  font-open left-0 w-[440px] shadow-2xl bg-[#cd2122] z-10  pt-[30px] pb-[25px] px-5 mt-[10px] text-xs leading-5 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:top-full top-[120%] group-hover:pointer-events-auto pointer-events-none">
       <div className="flex">
         <div className="w-[44%] px-[15px]">
           <div className="flex flex-col mt-[15px] items-center logo-container">
