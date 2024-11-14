@@ -1,8 +1,10 @@
 import React from "react";
 import testimonialsJson from "../../data/testimonials.json";
+import { useIFrame } from "../../context/IFrameContext";
 
-export default function Section3({setIFrame}) {
+export default function Section3() {
   const testimonialsData = testimonialsJson;
+  const {setIFrame} = useIFrame();
 
   return (
     <div className="w-full Section3 bg-[#F5F5F5]">

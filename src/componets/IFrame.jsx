@@ -1,6 +1,14 @@
-import React from "react";
+import {useEffect} from "react";
+import { useIFrame } from "../context/IFrameContext";
 
-export default function IFrame({ iFrame, setIFrame }) {
+export default function IFrame() {
+  const {iFrame, setIFrame} = useIFrame();
+
+
+  useEffect(() => {
+    document.body.style.overflow = iFrame ? 'hidden' : '';
+  }, [iFrame]);
+
   return (
     <>
       <div

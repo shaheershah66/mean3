@@ -3,12 +3,15 @@ import SocialMediaIcons from "./SocialMediaIcons";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import navLinksJson from "../data/navLinks.json";
 import Card from "./Card";
+import MobileMenu from "./MobileMenu";
+import Navbar from "./Navbar";
 
-export default function Header({ menu, setMenu }) {
+export default function Header() {
   const navLinks = navLinksJson;
   const location = useLocation();
   const [show, setShow] = useState(true);
   const [subMenu, setSubMenu] = useState(null);
+  const [menu, setMenu] = useState(false);
 
   const handleNavbar = () =>
     window.scrollY === 0 ? setShow(true) : setShow(false);
@@ -24,97 +27,15 @@ export default function Header({ menu, setMenu }) {
     };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = menu ? 'hidden' : '';
+  }, [menu]);
+
+
   return (
     <div className="Header h-auto md:h-[122px] w-full relative bg-[#333] text-white md:bg-transparent md:fixed z-20 md:top-0 md:left-0">
       {/* mobile menu */}
-      <div
-        className={`absolute duration-700 ease-in-out overflow-hidden block lg:hidden ${
-          menu ? "h-screen py-[60px]" : "h-0 py-0"
-        } top-0 left-0 z-40  flex  w-full  text-center bg-white mobile-menu`}
-      >
-        {/* cross button */}
-        <div
-          onClick={() => {
-            setMenu(!menu);
-            setSubMenu(null); // Toggle menu state on click
-          }}
-          className={`${
-            menu
-              ? "absolute"
-              : "absolute rotate-180 transition-transform duration-1000 ease-out delay-150"
-          }  w-[54px] h-[54px] cursor-pointer right-[30px] z-50 top-[30px]`}
-        >
-          <span
-            className={` ${
-              menu
-                ? "before:animate-grow after:animate-grow before:delay-200 after:delay-700"
-                : ""
-            } relative block w-full h-full before:content-[''] before:w-[2px] before:block before:absolute before:h-[15px] before:bg-black before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rotate-45  after:content-[''] after:w-[2px] after:block after:absolute after:h-[15px] after:bg-black after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:-rotate-45`}
-          ></span>
-        </div>
-        {/* cross button ends here */}
-        <ul className="w-full py-[40px] relative mb-[10px] font-sans">
-          {navLinks.map((parent, parentIndex) => {
-            const hasChildren = parent.hasOwnProperty("children");
-            const isActive =
-              hasChildren &&
-              parent.children.some((child) => child.url === location.pathname);
-            return (
-              <li key={parent.title}>
-                {!hasChildren ? (
-                  <NavLink
-                    onClick={() => setMenu(!menu)}
-                    to={parent.url}
-                    className={({ isActive }) =>
-                      `uppercase leading-[1.6] inline-block py-[0.17em] text-lg ${
-                        isActive ? "text-[#cd2122]" : "text-black"
-                      }`
-                    }
-                  >
-                    {parent.title}
-                  </NavLink>
-                ) : (
-                  <>
-                    <span
-                      onClick={() => handleSubMenu(parentIndex)}
-                      className={`${
-                        isActive ? "text-[#cd2122]" : "text-black"
-                      } text-lg uppercase leading-[1.6] py-[0.17em]`}
-                    >
-                      {parent.title}
-                    </span>
-                    <ul
-                      className={`w-full font-sans transition-all duration-700 ease-in-out overflow-hidden ${
-                        subMenu === parentIndex
-                          ? "max-h-[500px] pb-[1em]"
-                          : "max-h-0 pb-0"
-                      }`}
-                    >
-                      {parent.children.map((child) => {
-                        return (
-                          <li className="w-full" key={child.title}>
-                            <NavLink
-                              onClick={() => setMenu(!menu)}
-                              to={child.url}
-                              className={({ isActive }) =>
-                                `uppercase leading-[1.6] py-[0.17em] inline-block text-lg ${
-                                  isActive ? "text-[#cd2122]" : "text-black"
-                                }`
-                              }
-                            >
-                              {child.title}
-                            </NavLink>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <MobileMenu menu={menu} setMenu={setMenu} navLinks={navLinks} NavLink={NavLink} subMenu={subMenu} handleSubMenu={handleSubMenu} setSubMenu={setSubMenu} location={location} />
       {/* mobile menu ends here */}
       {/* bg overlay */}
       <div
@@ -188,106 +109,11 @@ export default function Header({ menu, setMenu }) {
                   fillRule="evenodd"
                   d="M3 5C3 4.44772 3.44772 4 4 4H20C20.5523 4 21 4.44772 21 5C21 5.55228 20.5523 6 20 6H4C3.44772 6 3 5.55228 3 5ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 19C3 18.4477 3.44772 18 4 18H20C20.5523 18 21 18.4477 21 19C21 19.5523 20.5523 20 20 20H4C3.44772 20 3 19.5523 3 19Z"
                   stroke="currentColor"
-                  strokeWidth="1" // Increase stroke width for even bolder bars
+                  strokeWidth="1"
                 />
               </svg>
-
               {/* menu button ends here */}
-              <ul className="hidden lg:flex">
-                {navLinks.map((parent) => {
-                  const hasChildren = parent.hasOwnProperty("children");
-                  const isActive =
-                    hasChildren &&
-                    parent.children.some(
-                      (child) => child.url === location.pathname
-                    );
-                  return (
-                    <li key={parent.title}>
-                      {!hasChildren ? (
-                        <NavLink
-                          to={parent.url}
-                          className={({ isActive }) =>
-                            `uppercase text-xs py-2 mx-[2px] px-3 z-20 cursor-pointer relative before:content-[''] before:absolute before:rounded-sm before:-z-[2] before:bg-[#cd2122] before:left-0 rounded-sm before:w-full before:hover:animate-middle-open ${
-                              isActive ? "bg-[#cd2122]" : ""
-                            }`
-                          }
-                        >
-                          {parent.title}
-                        </NavLink>
-                      ) : parent.title === "portfolio" ? (
-                        <span
-                          className={`${
-                            isActive ? "bg-[#cd2122]" : ""
-                          } text-xs rounded-sm before:rounded-sm uppercase group py-2 mx-[2px] px-3 z-20 cursor-text relative before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}
-                        >
-                          {parent.title}
-                          <ul className="py-[6px] invisible group-hover:visible opacity-0 group-hover:opacity-100 group-hover:top-full transition-all text-[#757575] min-w-[230px] top-[120%] absolute left-0 translate-y-2 bg-[#f5f5f5] border-solid border-2 rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
-                            {parent.children.map((child) => {
-                              return (
-                                <li className="w-full" key={child.title}>
-                                  <NavLink
-                                    to={child.url}
-                                    className={({ isActive }) =>
-                                      `inline-block hover:text-[#323232] hover:bg-[rgba(0,0,0,.04)] ${
-                                        isActive
-                                          ? "text-[#323232] bg-[rgba(0,0,0,.04)]"
-                                          : ""
-                                      } w-full px-5 py-[10px] text-xs leading-[14px] border-b-[1px] border-solid border-b-[rgba(0,0,0,.03)] z-10`
-                                    }
-                                  >
-                                    {child.title}
-                                  </NavLink>
-                                </li>
-                              );
-                            })}
-                          </ul>
-                        </span>
-                      ) : (
-                        <span
-                          className={`${
-                            isActive ? "bg-[#cd2122]" : ""
-                          } text-xs rounded-sm before:rounded-sm uppercase relative group py-2 mx-[2px] px-3 z-20 cursor-text before:content-[''] before:absolute before:-z-[2] before:bg-[#cd2122] before:left-0 before:w-full before:hover:animate-middle-open`}
-                        >
-                          {parent.title}
-                          {/* mega container */}
-                          <div className="z-20 leading-[14px] flex flex-wrap lg:-left-[257px] xl:-left-[297px] mega-container invisible opacity-0 group-hover:opacity-100 group-hover:visible py-5 group-hover:top-full transition-all text-black lg:w-[940px] xl:w-[1140px] border-[1px_solid_hsla(0,0%,100%,.8)] top-[120%] absolute translate-y-2 bg-[hsla(0,0%,96%,.95)] rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)]">
-                            {parent.children.map((item) => {
-                              return (
-                                <ul className="w-1/4 px-[15px] pb-[20px]">
-                                  <li className="w-full">
-                                    <span className="block text-sm border-b-solid border-b border-black/[0.1] py-[12px] mb-[15px] font-[600] uppercase">{item.title}</span>
-                                    <ul className="w-full">
-                                      {item.links.map((item2) => {
-                                        return (
-                                          <li className="w-full">
-                                            <NavLink
-                                              to={item2.url}
-                                              className={({ isActive }) =>
-                                                `inline-block w-full py-[10px] relative before:content-[''] before:bg-[#cd2122] before:bottom-0 before:absolute before:transition-all before:left-0 hover:before:w-full before:w-0 before:h-[2px] ${
-                                                  isActive
-                                                    ? "before:w-full"
-                                                    : ""
-                                                }`
-                                              }
-                                            >
-                                              {item2.title}
-                                            </NavLink>
-                                          </li>
-                                        );
-                                      })}
-                                    </ul>
-                                  </li>
-                                </ul>
-                              );
-                            })}
-                          </div>
-                          {/* mega container ends here */}
-                        </span>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
+             <Navbar navLinks={navLinks} location={location} NavLink={NavLink} />
             </nav>
             {/* website menu ends here */}
             <Link

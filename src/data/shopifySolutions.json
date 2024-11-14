@@ -1,0 +1,67 @@
+[
+  {
+    "title": "marketing & sales",
+    "list": [
+      "email marketing",
+      "seo",
+      "search engine advertising",
+      "social media marketing",
+      "content marketing",
+      "sales channel setup",
+      "conversion rate optimization",
+      "analytics and tracking",
+      "meta/tiktok pixel integration",
+      "enhanced ecommerce"
+    ]
+  },
+  {
+    "title": "store setup",
+    "list": [
+      "store build or redesign",
+      "store migration",
+      "product and collection setup",
+      "theme customization",
+      "custom visual elements",
+      "store settings configuration",
+      "pos setup and migration"
+    ]
+  },
+  {
+    "title": "development & troubleshooting",
+    "list": [
+      "custom apps and integrations",
+      "app installation",
+      "custom theme development",
+      "custom domain setup",
+      "custom commerce experience",
+      "troubleshooting"
+    ]
+  },
+  {
+    "title": "visual content & branding",
+    "list": [
+      "brand strategy",
+      "logo and visual branding",
+      "banners ads",
+      "video and illustration",
+      "product photography",
+      "photo editing"
+    ]
+  },
+  {
+    "title": "expert guidance",
+    "list": [
+      "business strategy guidance",
+      "product sourcing guidance",
+      "store setup and design guidance",
+      "marketing and sales guidance",
+      "site performance and speed",
+      "sales tax guidance",
+      "business consulting"
+    ]
+  },
+  {
+    "title": "content writing",
+    "list": ["website and marketing content", "product description"]
+  }
+]

@@ -26,7 +26,7 @@ module.exports = {
         'mont': ['Montserrat', 'sans-serif'],
         'open': ['Open Sans', 'sans-serif']
       },
-      
+    
       objectPosition: {
         'center-top': 'center top',
         'center-center': 'center center'
