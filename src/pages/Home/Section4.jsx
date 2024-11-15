@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 export default function Section4() {
   const sliderData = sliderImageJson;
 
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,

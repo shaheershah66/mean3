@@ -25,6 +25,8 @@ export default function SliderBtn({ direction, onClick, position }) {
     },
   };
 
+  
+
   return (
     <div
       style={{

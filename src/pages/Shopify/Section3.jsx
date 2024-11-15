@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Section3() {
   return (
-    <div className="w-full section3 pt-[2%]">
+    <div className="w-full Section3 pt-[2%]">
       <div className="flex items-center w-full justify-evenly section3-container">
-        <div className="w-[36%]">
+        <div className="w-[36%] text-[#373737]">
           <h1 className="text-[34px] font-bold leading-[41px] text-[#DA2128] my-[0.67em] pb-[2%]">
             We Are Experts In Shopify And Shopify Plus
           </h1>
@@ -37,10 +37,14 @@ export default function Section3() {
         </div>
 
         <div>
-            <img src="assets/computer-shopify.png" alt="Computer Logo" className=""></img>
+          <img
+            src="assets/computer-shopify.png"
+            alt="Computer Logo"
+            className=""
+          ></img>
         </div>
       </div>
-      <div className="line my-[55px] md:my-[5%] mx-auto w-[70%] md:w-[61%] shadow-line h-2 rounded-full"></div>
+      <div className="line my-[4%] mx-auto w-[61%] shadow-line h-2 rounded-full"></div>
     </div>
   );
 }

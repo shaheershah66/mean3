@@ -6,7 +6,7 @@ export default function Section5() {
     backgroundImage: "url('assets/bg-reviews-shopify.webp')",
   };
   return (
-    <div className="w-full section5 p-[2%] text-center mb-[3%]" style={bgImage}>
+    <div className="w-full Section5 p-[2%] text-center mb-[3%] bg-cover" style={bgImage}>
       <div className="w-full section4-container">
         <h1 className="text-[34px] font-bold leading-[41px] my-[0.67em] text-white">
           Our Reviews
@@ -53,7 +53,7 @@ export default function Section5() {
           </div>
         </div>
         <div className="w-full">
-            <NavLink className="inline-block py-[10px] px-[30px] bg-white rounded-[3px] font-bold text-[#DA2128] border-none leading-[1.15]">View Our Clientele</NavLink>
+            <NavLink to="/testimonial" className="inline-block py-[10px] px-[30px] bg-white rounded-[3px] font-bold text-[#DA2128] border-none leading-[1.15]">View Our Clientele</NavLink>
         </div>
       </div>
     </div>
