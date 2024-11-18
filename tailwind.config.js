@@ -24,7 +24,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'mont': ['Montserrat', 'sans-serif'],
-        'open': ['Open Sans', 'sans-serif']
+        'open': ['Open Sans', 'sans-serif'],
+        'arial': ['Arial', 'sans-serif']
       },
     
       objectPosition: {

@@ -1,7 +1,10 @@
+import { useShopifySlider } from "../../context/ShopifySliderContext";
 import shopifyBrandsJson from "../../data/shopifyBrands.json";
 
 export default function Section9() {
   const shopifyBrandsData = shopifyBrandsJson;
+  const {isOpenSlider, setIsOpenSlider} = useShopifySlider();
+
   return (
     <div className="w-full Section9 h-[65vh]">
       <div className="w-full section9-container">
@@ -15,10 +18,10 @@ export default function Section9() {
           </p>
         </div>
         <div className="w-full flex py-[35px] px-[15px] mx-auto md:w-[750px] lg:w-[970px] xl:w-[1170px]">
-          {shopifyBrandsData.map(({ imgUrl }) => {
+          {shopifyBrandsData.map((item, index) => {
             return (
-              <div key={imgUrl} className="w-[20%] px-5 cursor-pointer">
-                <img className="inline-block object-cover w-full" src={imgUrl} alt="Brand Logos"></img>
+              <div key={item.imgUrl} className="w-[20%] px-5 cursor-pointer" onClick={() => setIsOpenSlider({show: true, index: index})}>
+                <img className="inline-block object-cover w-full" src={item.imgUrl} alt="Brand Logos"></img>
               </div>
             );
           })}

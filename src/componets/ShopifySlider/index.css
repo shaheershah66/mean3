@@ -1,0 +1,104 @@
+.btn{
+    position: absolute;
+    opacity: .65;
+    margin: 0;
+    top: 50%;
+    margin-top: -55px;
+    padding: 0;
+    width: 90px;
+    height: 110px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    outline: none;
+    padding: 0;
+    z-index: 1046;
+    box-shadow: none;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.btn-left::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent;
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px;
+    border-right: 17px solid #fff;
+    margin-left: 31px;
+}
+
+.btn-left::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent;
+    border-top-width: 21px;
+    border-bottom-width: 21px;
+    opacity: .7;
+    margin-left: 25px;
+    border-right: 27px solid #3f3f3f;
+}
+
+.btn-left{
+    left: 0;
+}
+
+.btn-right::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent;
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px;
+    border-left: 17px solid #fff;
+    margin-left: 39px;
+}
+
+.btn-right::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent;
+    border-top-width: 21px;
+    border-bottom-width: 21px;
+    opacity: .7;
+    border-left: 27px solid #3f3f3f;
+}
+
+.btn-right{
+    right: 0;
+}
