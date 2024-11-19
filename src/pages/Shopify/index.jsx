@@ -8,22 +8,24 @@ import Section6 from "./Section6";
 import Section7 from "./Section7";
 import Section8 from "./Section8";
 import Section9 from "./Section9";
+import Section10 from "./Section10";
 
-export default function Shopify() {
+export default function Shopify({plus}) {
   return (
     <div className="Shopify">
       <Helmet>
         <title>Shopify - Mean3 Software Solutions</title>
       </Helmet>
       <Section1 />
-      <Section2 />
+      <Section2 plus={plus} />
       <Section3 />
       <Section4 />
-      <Section5 />
-      <Section6 />
+      <Section5 plus={plus}/>
+      <Section6 plus={plus}/>
       <Section7 />
       <Section8 />
-      <Section9 />
+      <Section9 plus={plus}/>
+      <Section10 />
     </div>
   );
 }

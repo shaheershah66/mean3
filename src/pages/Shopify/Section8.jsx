@@ -9,17 +9,17 @@ export default function Section8() {
   };
 
   return (
-    <div className="w-full Section8 mt-[4%]">
+    <div className="w-full Section8 mt-[8%] md:mt-[4%]">
       <div className="w-full section8-container">
-        <div className="w-[61%] pb-[1%] mx-auto text-center">
-          <h1 className="leading-[41px] text-[34px] text-[#151515] font-bold my-[0.67em]">
+        <div className="w-[90%] md:w-[61%] pb-[1%] mx-auto text-center">
+          <h1 className="leading-[29px] md:leading-[41px] text-[24px] md:text-[34px] text-[#151515] font-bold my-[0.67em]">
             Frequently Asked Questions
           </h1>
         </div>
-        <div className="w-[784px] p-[2%] mx-auto faq-container font-open leading-[21px]">
+        <div className="w-full md:w-[784px] p-5 md:p-[2%] mx-auto faq-container font-open leading-[21px]">
           
           <div
-            className="faq-item rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
+            className="faq-item text-[11px] md:text-sm rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
             style={{
               background:
                 "linear-gradient(0deg, #FEFFFF, #FEFFFF), linear-gradient(0deg, #DEDEDE, #DEDEDE)",
@@ -30,7 +30,7 @@ export default function Section8() {
               className="question text-[#444444] cursor-pointer flex justify-between items-center"
             >
               What is Shopify and how does it work?
-              <b className="text-[40px] text-[#DA2128] font-[300]">+</b>
+              <b className="text-[40px] text-[#DA2128] font-[300]">{isOpen[0] ? "-" :  "+"}</b>
             </div>
             <div
               className={`${
@@ -104,7 +104,7 @@ export default function Section8() {
           </div>
 
           <div
-            className="faq-item rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
+            className="faq-item text-[11px] md:text-sm rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
             style={{
               background:
                 "linear-gradient(0deg, #FEFFFF, #FEFFFF), linear-gradient(0deg, #DEDEDE, #DEDEDE)",
@@ -115,7 +115,7 @@ export default function Section8() {
               className="question text-[#444444] cursor-pointer flex justify-between items-center"
             >
               How much does Shopify cost?
-              <b className="text-[40px] text-[#DA2128] font-[300]">+</b>
+              <b className="text-[40px] text-[#DA2128] font-[300]">{isOpen[1] ? "-" :  "+"}</b>
             </div>
             <div
               className={` ${
@@ -150,7 +150,7 @@ export default function Section8() {
           </div>
 
           <div
-            className="faq-item rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
+            className="faq-item text-[11px] md:text-sm rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
             style={{
               background:
                 "linear-gradient(0deg, #FEFFFF, #FEFFFF), linear-gradient(0deg, #DEDEDE, #DEDEDE)",
@@ -161,7 +161,7 @@ export default function Section8() {
               className="question text-[#444444] cursor-pointer flex justify-between items-center"
             >
               Can I use my own domain name with Shopify?
-              <b className="text-[40px] text-[#DA2128] font-[300]">+</b>
+              <b className="text-[40px] text-[#DA2128] font-[300]">{isOpen[2] ? "-" :  "+"}</b>
             </div>
             <div
               className={` ${
@@ -200,7 +200,7 @@ export default function Section8() {
           </div>
 
           <div
-            className="faq-item rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
+            className="faq-item text-[11px] md:text-sm rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
             style={{
               background:
                 "linear-gradient(0deg, #FEFFFF, #FEFFFF), linear-gradient(0deg, #DEDEDE, #DEDEDE)",
@@ -211,7 +211,7 @@ export default function Section8() {
               className="question text-[#444444] cursor-pointer flex justify-between items-center"
             >
               In what countries can I use Shopify?
-              <b className="text-[40px] text-[#DA2128] font-[300]">+</b>
+              <b className="text-[40px] text-[#DA2128] font-[300]">{isOpen[3] ? "-" :  "+"}</b>
             </div>
             <div
               className={` ${
@@ -226,7 +226,7 @@ export default function Section8() {
           </div>
 
           <div
-            className="faq-item rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
+            className="faq-item text-[11px] md:text-sm rounded-[8px] p-[2%] border border-solid border-[#DEDEDE] mb-[4%]"
             style={{
               background:
                 "linear-gradient(0deg, #FEFFFF, #FEFFFF), linear-gradient(0deg, #DEDEDE, #DEDEDE)",
@@ -237,7 +237,7 @@ export default function Section8() {
               className="question text-[#444444] cursor-pointer flex justify-between items-center"
             >
               Which languages does Shopify support?
-              <b className="text-[40px] text-[#DA2128] font-[300]">+</b>
+              <b className="text-[40px] text-[#DA2128] font-[300]">{isOpen[4] ? "-" :  "+"}</b>
             </div>
             <div
               className={` ${
@@ -263,7 +263,7 @@ export default function Section8() {
         </div>
 
       </div>
-      <div className="line mb-[4%] mt-[1%] mx-auto w-[61%] shadow-line h-2 rounded-full"></div>
+      <div className="line mb-[55px] md:mb-[4%] mt-[1%] mx-auto w-[70%] md:w-[61%] shadow-line h-2 rounded-full"></div>
     </div>
   );
 }

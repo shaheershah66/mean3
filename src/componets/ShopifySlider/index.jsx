@@ -34,10 +34,10 @@ export default function ShopifySlider() {
       <div
         className={`${
           isOpenSlider.show ? "visible" : "invisible"
-        } absolute top-0 left-0 z-40 w-full h-full bg-[#333] opacity-95 transition-all duration-[0.15s] ease-out`}
+        } fixed top-0 left-0 z-40 w-full h-full bg-[#333] opacity-95 transition-all duration-[0.2s] ease-out delay-75`}
       ></div>
 
-      <div className={`${isOpenSlider.show ? "visible" : "invisible"} fixed top-0 left-0 z-50 w-full h-full transition-all duration-[0.15s] ease-out`}>
+      <div className={`${isOpenSlider.show ? "visible" : "invisible"} fixed top-0 left-0 z-50 w-full h-full transition-all duration-[0.2s] delay-75 ease-out`}>
         <div className="absolute px-[8px] left-0 top-0 text-center w-full h-full before:content-[''] before:inline-block before:h-full before:align-middle">
           <div className="relative inline-block w-auto h-[auto]">
             <span

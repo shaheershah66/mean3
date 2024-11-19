@@ -16,7 +16,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/ecommerce-shopify" element={<Shopify />} />
+            <Route path="/ecommerce-shopify" element={<Shopify plus={false} />} />
+            <Route path="/shopify-plus" element={<Shopify plus={true} />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/blogs" element={<Blogs />} />
