@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react";
 import shopifyBrandsJson from "../../data/shopifyBrands.json";
-import { useShopifySlider } from "../../context/ShopifySliderContext";
+import shopifyPlusBrandsJson from "../../data/shopifyPlusBrands.json"
 import "./index.css";
+import { useLocation } from "react-router-dom";
+import { useCmsSlider } from "../../context/CmsSliderContext";
 
-export default function ShopifySlider() {
+export default function CmsSliderOverlay() {
   const shopifyBrandsData = shopifyBrandsJson;
-  const { isOpenSlider, setIsOpenSlider } = useShopifySlider();
+  const shopifyPlusBrandsData = shopifyPlusBrandsJson;
+  const location = useLocation();
+  const brandsData = location.pathname === "/shopify-plus" ? shopifyPlusBrandsData : shopifyBrandsData 
+  const { isOpenSlider, setIsOpenSlider } = useCmsSlider();
   const [currentIndex, setCurrentIndex] = useState(isOpenSlider.index);
 
   const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % shopifyBrandsData.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % brandsData.length);
   };
 
   const goToPrevious = () => {
     setCurrentIndex(
       (prevIndex) =>
-        (prevIndex - 1 + shopifyBrandsData.length) % shopifyBrandsData.length
+        (prevIndex - 1 + brandsData.length) % brandsData.length
     );
   };
 
@@ -49,10 +54,10 @@ export default function ShopifySlider() {
             <img
               onClick={goToNext}
               className="inline-block object-cover w-auto h-auto cursor-pointer"
-              src={shopifyBrandsData[currentIndex]?.imgUrl}
+              src={brandsData[currentIndex]?.imgUrl}
               alt={`Brand Logo ${currentIndex + 1}`}
             />
-            <div className="block text-[#ccc] text-[12px] absolute -bottom-[25px] font-open right-0">{`${currentIndex + 1} of ${shopifyBrandsData.length }`}</div>
+            <div className="block text-[#ccc] text-[12px] absolute -bottom-[25px] font-open right-0">{`${currentIndex + 1} of ${brandsData.length }`}</div>
           </div>
           <button onClick={goToPrevious} className="btn btn-left"></button>
           <button onClick={goToNext} className="btn btn-right"></button>

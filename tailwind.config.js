@@ -40,27 +40,14 @@ module.exports = {
       },
 
       keyframes: {
-        "slide-up": {
-          "0%": { transform: "translateY(100%)", opacity: 0 },
-          "100%": { transform: "translateY(0)", opacity: 1 },
-        },
-
         "middle-open": {
           "0%": { top: "50%", height: "0" },
           "100%": { top: "0", height: "100%" },
         },
-
-        grow: {
-          '0%': { height: '0', },
-          '100%': { height: '15px' },
-        },
-
       },
       
       animation: {
-        "slide-up": "slide-up 1s ease-in-out",
         "middle-open":"middle-open 0.2s ease-in-out forwards",
-        "grow": 'grow 0.5s ease-out forwards',
       },
     },
   },

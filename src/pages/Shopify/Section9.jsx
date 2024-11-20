@@ -1,15 +1,11 @@
-import { useShopifySlider } from "../../context/ShopifySliderContext";
 import shopifyBrandsJson from "../../data/shopifyBrands.json";
 import shopifyPlusBrandsJson from "../../data/shopifyPlusBrands.json";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import CmsSlider from "../../componets/CmsSlider";
 
 export default function Section9({ plus }) {
   const shopifyBrandsData = shopifyBrandsJson;
   const shopifyPlusBrandsData = shopifyPlusBrandsJson;
-  const { setIsOpenSlider } = useShopifySlider();
 
   const settings = {
     touchMove: false,
@@ -59,26 +55,7 @@ export default function Section9({ plus }) {
         </div>
 
         <div className="w-full pt-[35px] pb-[60px] px-0 md:px-[15px] mx-auto md:w-[750px] lg:w-[970px] xl:w-[1170px]">
-          {/* Slider Component */}
-          <Slider {...settings}>
-            {brandsData.length > 0 ? (
-              brandsData.map((item, index) => (
-                <div
-                  key={item.imgUrl}
-                  className="px-[10px] min-[625px]:px-5 cursor-pointer"
-                  onClick={() => setIsOpenSlider({ show: true, index })}
-                >
-                  <img
-                    className="inline-block object-cover w-full"
-                    src={item.imgUrl}
-                    alt="Brand Logo"
-                  />
-                </div>
-              ))
-            ) : (
-              <p>No brands available.</p> // Optional fallback if there are no brands
-            )}
-          </Slider>
+          <CmsSlider settings={settings} slides={brandsData} />
         </div>
 
         <div className="text-center">

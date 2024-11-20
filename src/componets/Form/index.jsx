@@ -50,7 +50,7 @@ export default function Form(){
                         neededServicesF.map((item) => {
                             const changeValue = item.toLowerCase().replace(" ", "-")
                             return(
-                                <option value={changeValue}>{item}</option>
+                                <option key={changeValue} value={changeValue}>{item}</option>
                             )
                         })
                     }
@@ -76,7 +76,7 @@ export default function Form(){
                         budgetF.map((item) => {
                             const changeValue = item.toLowerCase().replace(" ", "-").replace(" - ", "-")
                             return(
-                                <option value={changeValue}>{item}</option>
+                                <option key={changeValue} value={changeValue}>{item}</option>
                             )
                         })
                     }
