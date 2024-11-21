@@ -18,7 +18,7 @@ export default function Section2() {
             Development | Magento Maintenance | Security & Compliance
           </p>
         </div>
-        <div className="line mx-auto my-[55px] md:mt-[4%] md:mb-0 w-[70%] md:w-[61%] shadow-line h-2 rounded-full"></div>
+        <div className="line mx-auto my-[55px] md:mt-[4%] md:mb-0  w-[70%] md:w-[61%] shadow-line h-2 rounded-[100%]" ></div>
       </div>
     </div>
   );

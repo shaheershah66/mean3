@@ -1,0 +1,26 @@
+[
+  {
+    "title": "custom storefronts",
+    "text": "With an understanding of BigCommerce’s theming capabilities, we customize and fine-tune existing themes and create visually appealing custom storefronts that capture your brand essence and provide an immersive user experience in just the right balance."
+  },
+  {
+    "title": "migration and replatforming",
+    "text": "We seamlessly migrate your ecommerce store to BigCommerce, transferring critical data, mapping every product, and installing essential applications to enhance functionality. We redesign your store for a fresh look and make minor SEO tweaks to prevent negative impact."
+  },
+  {
+    "title": "bigcommerce app development",
+    "text": "We use cutting-edge technologies and industry best practices to create scalable, modular, and feature-rich applications tailored to your unique business requirements, to help you unlock the full potential of your online store and improve the user experience and increase efficiencies."
+  },
+  {
+    "title": "api integrations",
+    "text": "Increase your operational efficiencies, streamline processes, and enable data-driven decision-making capabilities by connecting your online store with third-party applications, via RESTful APIs, webhooks, and data pipelines, to automate workflows and enable real-time data exchange."
+  },
+  {
+    "title": "headless ecommerce development",
+    "text": "By leveraging modern technologies like GraphQL, API-driven architectures, and microservices, we enable seamless integration with external systems, empower omnichannel experiences, and drive digital transformation in the ever-evolving e-commerce landscape."
+  },
+  {
+    "title": "performance engineering",
+    "text": "Through rigorous performance profiling, code optimization, database fine-tuning, and CDN integration, we enhance your store’s performance, achieving lightning-fast page load times, optimal server response, and exceptional scalability to effortlessly handle surges in traffic and drive peak performance."
+  }
+]

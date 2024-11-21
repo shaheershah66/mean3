@@ -14,7 +14,7 @@ const MobileMenu = ({
     <div
       className={`lg:hidden ${
         menu ? "is-active" : "not-active"
-      } menu-bar-overlay`}
+      } menu-bar-overlay fixed`}
     >
       <div className="pt-[60px] pb-[50px] text-center block absolute left-0 top-0 w-full h-full overflow-x-hidden">
         {/* Cross Button */}
@@ -28,7 +28,7 @@ const MobileMenu = ({
           <span className={`${menu ? "line-active" : ""}`}></span>
         </div>
         {/* cross button ends here */}
-        <ul className="w-full py-[40px] relative mb-[10px] font-open">
+        <ul className="w-full py-[40px] relative mb-[10px] font-open text-base md:text-lg">
           {navLinks.map((parent, parentIndex) => {
             const hasChildren = parent.hasOwnProperty("children");
             let isActive = false;
@@ -59,7 +59,7 @@ const MobileMenu = ({
                     onClick={() => setMenu(!menu)}
                     to={parent.url}
                     className={({ isActive }) =>
-                      `uppercase leading-[1.6] inline-block py-[0.17em] text-lg ${
+                      `uppercase leading-[1.6] inline-block py-[0.17em] ${
                         isActive ? "text-[#cd2122]" : "text-black"
                       }`
                     }
@@ -72,7 +72,7 @@ const MobileMenu = ({
                       onClick={() => handleSubMenu(parentIndex)}
                       className={`${
                         isActive ? "text-[#cd2122]" : "text-black"
-                      } text-lg uppercase leading-[1.6] py-[0.17em]`}
+                      } uppercase leading-[1.6] py-[0.17em] inline-block`}
                     >
                       {parent.title}
                     </span>
@@ -93,7 +93,7 @@ const MobileMenu = ({
                               }}
                               to={child.url}
                               className={({ isActive }) =>
-                                `uppercase leading-[1.6] py-[0.17em] inline-block text-lg ${
+                                `uppercase leading-[1.6] py-[0.17em] inline-block ${
                                   isActive ? "text-[#cd2122]" : "text-black"
                                 }`
                               }
@@ -115,7 +115,7 @@ const MobileMenu = ({
                         {parent.children.map((child) => (
                           <li className="w-full" key={child.title}>
                             <>
-                              <span className="inline-block mt-5 text-[#DA2128] text-lg uppercase font-[800] underline py-[0.17em]">
+                              <span className="inline-block mt-5 text-[#DA2128] uppercase font-[800] underline py-[0.17em]">
                                 {child.title}
                               </span>
                               <ul className="w-full">
@@ -129,7 +129,7 @@ const MobileMenu = ({
                                         }}
                                         to={child2.url}
                                         className={({ isActive }) =>
-                                          `uppercase leading-[1.6] py-[0.17em] inline-block text-lg ${
+                                          `uppercase leading-[1.6] py-[0.17em] inline-block ${
                                             isActive
                                               ? "text-[#cd2122]"
                                               : "text-black"

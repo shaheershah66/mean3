@@ -14,7 +14,7 @@ export default function Shopify({plus}) {
   return (
     <div className="Shopify">
       <Helmet>
-        <title>Shopify - Mean3 Software Solutions</title>
+        <title>{plus ? "Shopify Plus" : "Shopify"} - Mean3 Software Solutions</title>
       </Helmet>
       <Section1 />
       <Section2 plus={plus} />

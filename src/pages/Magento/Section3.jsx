@@ -1,6 +1,6 @@
 export default function Section3() {
   return (
-    <div className="w-full Section3 mb-[4%] md:mb-0 px-5 md:px-0 md:pt-[9%] md:pb-[2%]">
+    <div className="w-full Section3 mb-[4%] md:mb-0 px-5 md:px-0 md:pt-[2.2%] md:pb-[2%]">
       <div className="flex flex-col items-center w-full md:flex-row section3-container justify-evenly">
         <div className="md:w-[60%] md:pl-[5%] xl:pl-0 xl:w-[36%] mb-5 md:mb-0">
           <h1 className="text-[24px] md:text-[34px] font-bold leading-[32px] md:leading-[41px] my-[0.67em] pb-[1%] text-[#DA2128]">

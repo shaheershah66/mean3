@@ -263,7 +263,7 @@ export default function Section8() {
         </div>
 
       </div>
-      <div className="line mb-[55px] md:mb-[4%] mt-[1%] mx-auto w-[70%] md:w-[61%] shadow-line h-2 rounded-full"></div>
+      <div className="line mb-[55px] md:mb-[4%] mt-[1%] mx-auto w-[70%] md:w-[61%] shadow-line h-2 rounded-[100%]"></div>
     </div>
   );
 }

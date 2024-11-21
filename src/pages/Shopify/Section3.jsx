@@ -44,7 +44,7 @@ export default function Section3() {
           ></img>
         </div>
       </div>
-      <div className="line my-[55px] md:my-[4%] mx-auto w-[70%] md:w-[61%] shadow-line h-2 rounded-full"></div>
+      <div className="line my-[55px] md:my-[4%] mx-auto w-[70%] md:w-[61%] shadow-line h-2 rounded-[100%]"></div>
     </div>
   );
 }

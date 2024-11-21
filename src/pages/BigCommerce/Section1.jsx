@@ -10,11 +10,12 @@ export default function Section1() {
       <div className="flex items-center justify-center w-full h-full px-5 text-center section1-container">
         <div className="flex flex-col items-center text-white">
           <h1 className="leading-[32px] md:leading-[85px] text-[32px] md:text-[45px] xl:text-[70px] font-bold">
-            Magento Development
+            BigCommerce Development
           </h1>
           <hr className="w-1/4 my-5"></hr>
           <p className="text-sm font-bold md:text-lg text-[#E2E2E2]">
-            Dream, Develop, Deliver: Empowering Businesses with Magento
+            Empowering Your Business Growth Through Innovative BigCommerce
+            Solutions
           </p>
         </div>
       </div>

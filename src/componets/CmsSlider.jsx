@@ -11,11 +11,11 @@ export default function CmsSlider({ settings, slides }) {
         slides.map((item, index) => (
           <div
             key={item.imgUrl}
-            className="px-[10px] min-[625px]:px-5 cursor-pointer"
+            className="px-[10px] min-[625px]:px-5 w-auto cursor-pointer"
             onClick={() => setIsOpenSlider({ show: true, index })}
           >
             <img
-              className="inline-block object-cover w-full"
+              className="inline-block object-cover w-auto"
               src={item.imgUrl}
               alt="Brand Logo"
             />
