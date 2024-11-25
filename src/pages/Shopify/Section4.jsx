@@ -11,7 +11,7 @@ export default function Section4() {
           We've Got The Solution If You're Ready To Design Build On Scale On
           Shopify
         </h1>
-        <div className="boxes w-[85%] xs:w-full md:w-[85%] flex justify-center gap-x-[2%] gap-y-[30px] flex-wrap mx-auto p-[2%_0px_4%_0px]">
+        <div className="boxes w-[85%] xs:w-full md:w-[85%] flex justify-center gap-x-[2%] gap-y-[19px] md:gap-y-[30px] flex-wrap mx-auto p-[2%_0px_4%_0px]">
           {shopifySolutionsData.map(({ title, list }, index) => {
             return (
               <div key={title} className={`box-${index+1} w-full xs:w-[45%] md:w-[30%] p-[3%] ${(index + 1) % 2 === 0 ? "text-[#373737] bg-[#F5F5F5]" : "bg-[#E42E35] text-white"}`}>
