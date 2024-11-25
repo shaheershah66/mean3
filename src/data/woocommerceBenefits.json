@@ -1,0 +1,26 @@
+[
+    {
+        "imgUrl": "assets/woo-wordpress.png",
+        "title": "wordPress ready",
+        "text": "Seamlessly integrates within your current WordPress site for easy access and management."
+    },
+
+    {
+        "imgUrl": "assets/woo-secure.png",
+        "title": "safe & secure",
+        "text": "Protects buyer data to ensure encrypted information is securely sent and stored."
+    },
+    
+    {
+        "imgUrl": "assets/woo-report.png",
+        "title": "track & report",
+        "text": "Real time product and sales tracking allows you to make better business decisions."
+    },
+    
+    {
+        "imgUrl": "assets/woo-integration.png",
+        "title": "ease of integration",
+        "text": "WooCommerce integrates with over 140 popular payment gateways."
+    }
+    
+]

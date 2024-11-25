@@ -3,6 +3,7 @@ import shopifyBrandsJson from "../../data/shopifyBrands.json";
 import shopifyPlusBrandsJson from "../../data/shopifyPlusBrands.json";
 import magentoBrandsJson from "../../data/magentoBrands.json";
 import bigcommerceBrandsJson from "../../data/bigcommerceBrands.json";
+import woocommerceBrandsJson from "../../data/woocommerceBrands.json";
 import "./index.css";
 import { useLocation } from "react-router-dom";
 import { useCmsSlider } from "../../context/CmsSliderContext";
@@ -12,6 +13,7 @@ export default function CmsSliderOverlay() {
   const shopifyPlusBrandsData = shopifyPlusBrandsJson;
   const magentoBrandsData = magentoBrandsJson;
   const bigcommerceBrandsData = bigcommerceBrandsJson;
+  const woocommerceBrandsData = woocommerceBrandsJson;
   const location = useLocation();
   const brandsData =
     location.pathname === "/shopify-plus"
@@ -20,7 +22,9 @@ export default function CmsSliderOverlay() {
       ? shopifyBrandsData
       : location.pathname === "/magento-development"
       ? magentoBrandsData
-      : bigcommerceBrandsData;
+      : location.pathname === "/bigcommerce-development"
+      ? bigcommerceBrandsData
+      : woocommerceBrandsData;
   const { isOpenSlider, setIsOpenSlider } = useCmsSlider();
   const [currentIndex, setCurrentIndex] = useState(isOpenSlider.index);
 

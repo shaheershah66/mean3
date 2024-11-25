@@ -68,7 +68,7 @@ const Navbar = ({ navLinks, location, NavLink }) => {
               >
                 {parent.title}
                 {/* Mega container */}
-                <div className="z-20 leading-[14px] flex flex-wrap lg:-left-[257px] xl:-left-[297px] mega-container invisible opacity-0 group-hover:opacity-100 group-hover:visible py-5 group-hover:top-full transition-all text-black lg:w-[940px] xl:w-[1140px] border-[1px_solid_hsla(0,0%,100%,.8)] top-[120%] absolute translate-y-2 bg-[hsla(0,0%,96%,.95)] rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)]">
+                <div className="z-20 leading-[14px] flex flex-wrap lg:-left-[257px] xl:-left-[297px] mega-container invisible opacity-0 group-hover:opacity-100 group-hover:visible py-5 group-hover:top-full transition-all text-black lg:w-[940px] xl:w-[1140px] border-[1px_solid_hsla(0,0%,100%,.8)] top-[120%] absolute translate-y-2 bg-[hsla(0,0%,96%,.95)] rounded-sm shadow-[0_0_4px_rgba(0,0,0,0.4)] before:content-[''] before:absolute before:block before:w-full before:h-[12px] before:top-[-12px]">
                   {parent.children.map((item) => (
                     <ul className="w-1/4 px-[15px] pb-[20px]" key={item.title}>
                       <li className="w-full">

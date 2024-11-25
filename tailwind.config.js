@@ -44,10 +44,16 @@ module.exports = {
           "0%": { top: "50%", height: "0" },
           "100%": { top: "0", height: "100%" },
         },
+
+        "slide-up": {
+          "0%": { transform: "translateY(100%)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
       },
       
       animation: {
         "middle-open":"middle-open 0.2s ease-in-out forwards",
+        "slide-up": "slide-up 1s ease-in-out",
       },
     },
   },
