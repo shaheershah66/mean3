@@ -3,39 +3,39 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      'xxxs': '331px',
+      xxxs: "331px",
 
-      'xxs': '431px',
+      xxs: "431px",
 
-      'xs': '481px',
+      xs: "481px",
 
-      'sm': '640px',
+      sm: "640px",
 
-      'smd': '735px',
+      smd: "735px",
 
-      'md': '768px',
+      md: "768px",
 
-      'lg': '992px',
+      lg: "992px",
 
-      'sxl': '1081px',
+      sxl: "1081px",
 
-      'xl': '1200px',
+      xl: "1200px",
     },
     extend: {
       fontFamily: {
-        'mont': ['Montserrat', 'sans-serif'],
-        'open': ['Open Sans', 'sans-serif'],
-        'arial': ['Arial', 'sans-serif']
+        mont: ["Montserrat", "sans-serif"],
+        open: ["Open Sans", "sans-serif"],
+        arial: ["Arial", "sans-serif"],
       },
-    
+
       objectPosition: {
-        'center-top': 'center top',
-        'center-center': 'center center'
+        "center-top": "center top",
+        "center-center": "center center",
       },
 
       boxShadow: {
-        "line": "0px 4px 4px 0px #00000040",
-        "box": "0px 0px 20px 0px #00000040",
+        line: "0px 4px 4px 0px #00000040",
+        box: "0px 0px 20px 0px #00000040",
         "input-cont": "inset 1px 2px 0 rgba(0,0,0,.06)",
       },
 
@@ -49,14 +49,19 @@ module.exports = {
           "0%": { transform: "translateY(100%)", opacity: 0 },
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
+
+        "float": {
+          "0%": { top: "-8px" },
+          "100%": { top: "8px" },
+        },
       },
-      
+
       animation: {
-        "middle-open":"middle-open 0.2s ease-in-out forwards",
+        "middle-open": "middle-open 0.2s ease-in-out forwards",
         "slide-up": "slide-up 1s ease-in-out",
+        "float": "float 1s ease-in-out infinite alternate"
       },
     },
   },
   plugins: [],
-  
 };

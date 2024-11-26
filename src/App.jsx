@@ -6,6 +6,7 @@ import Shopify from "./pages/Shopify";
 import Magento from "./pages/Magento";
 import BigCommerce from "./pages/BigCommerce";
 import WooCommerce from "./pages/WooCommerce";
+import WebDevelopment from "./pages/WebDevelopment";
 import Clients from "./pages/Clients";
 import Testimonial from "./pages/Testimonial";
 import AboutUs from "./pages/AboutUs";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/magento-development" element={<Magento />} />
             <Route path="/bigcommerce-development" element={<BigCommerce />} />
             <Route path="/woocommerce-development" element={<WooCommerce />} />
+            <Route path="/web-development-designing" element={<WebDevelopment />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/blogs" element={<Blogs />} />
