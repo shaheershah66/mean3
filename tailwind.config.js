@@ -26,6 +26,8 @@ module.exports = {
         mont: ["Montserrat", "sans-serif"],
         open: ["Open Sans", "sans-serif"],
         arial: ["Arial", "sans-serif"],
+        georgia: ["Georgia", "sans-serif"],
+        glyphicons:["GLYPHICONS Halflings"]
       },
 
       objectPosition: {

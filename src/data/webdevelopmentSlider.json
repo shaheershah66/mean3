@@ -1,0 +1,13 @@
+[
+    {
+        "rightImgUrl" : "assets/white-web-development.jpg",
+        "leftImgUrl" : "assets/diners-web-development.jpg",
+        "middleImgUrl" : "assets/adamjee-web-development.jpg"
+    },
+
+    {
+        "rightImgUrl" : "assets/mtj-web-development.jpg",
+        "leftImgUrl" : "assets/telemall-web-development.jpg",
+        "middleImgUrl" : "assets/interior-web-development.jpg"
+    }
+]

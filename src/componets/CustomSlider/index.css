@@ -1,0 +1,169 @@
+.slick-slide {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.slick-slide.slick-current {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Individual image animations */
+.right-img,
+.left-img,
+.middle-img {
+  animation: slideIn 0.5s ease forwards;
+  opacity: 1; /* Start with hidden images */
+  transform: translateY(100%); /* Start from below */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
+}
+
+.right-img,
+.left-img
+{
+    bottom:-5px
+}
+
+.middle-img{
+    bottom: -10px;
+}
+
+.psl__img:hover {
+  z-index: 5;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.32);
+  transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
+}
+
+.psl_img {
+  transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
+}
+
+.slick-slide.slick-current .middle-img {
+  animation-delay: 0.2s; /* First */
+}
+
+.slick-slide.slick-current .right-img {
+  animation-delay: 0.4s; /* Second */
+}
+
+.slick-slide.slick-current .left-img {
+  animation-delay: 0.6s; /* Third */
+}
+
+/* Non-active slides reset */
+.slick-slide:not(.slick-current) .right-img,
+.slick-slide:not(.slick-current) .left-img,
+.slick-slide:not(.slick-current) .middle-img {
+  animation: slideOut 0.5s ease forwards;
+}
+
+.prev-arr {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+    text-align: right;
+}
+
+.next-arr {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+    text-align: right;
+}
+
+.arr {
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+    width: 34px;
+    height: 54px;
+    line-height: 54px;
+    position: absolute;
+    bottom: 110px;
+    z-index: 10;
+    border-radius: 4px;
+    transition: width .2s ease-out;
+    cursor: pointer;
+}
+
+.arr svg {
+    position: absolute;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%)
+}
+
+.prev-arr svg {
+    right: 10px
+}
+
+.next-arr svg {
+    left: 10px
+}
+
+.arr polyline {
+    stroke: #fff
+}
+
+.arr:hover {
+    background-color: rgba(0,0,0,.3);
+    width: 60px
+}
+
+
+/* Slide In Keyframe */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide Out Keyframe */
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@media (min-width: 768px) {
+  .psl-carousel__item:hover .psl-img--left {
+    left: 48%;
+  }
+
+  .psl-carousel__item:hover .psl-img--left:hover {
+    left: 48%;
+  }
+
+  .psl-carousel__item:hover .psl-img--left:hover + .psl-img--front {
+    margin-left: -210px;
+  }
+
+  .psl-carousel__item:hover .psl-img--right {
+    right: 48%;
+  }
+
+  .psl-carousel__item:hover .psl-img--right:hover {
+    right: 48%;
+  }
+
+  .psl-carousel__item:hover .psl-img--right:hover ~ .psl-img--front {
+    margin-left: -290px;
+    /* transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1); */
+  }
+
+  .psl-img--front:hover {
+    width: 510px;
+    margin-left: -255px;
+    bottom: -5px;
+  }
+}
