@@ -42,7 +42,7 @@ export default function CustomSlider({slides}) {
     dots: false,
     infinite: true,
     fade: true,
-    autoplay: true,
+    autoplay: false,
     speed: 1000,
     autoplaySpeed: 3000,
     slidesToShow: 1,
@@ -55,7 +55,7 @@ export default function CustomSlider({slides}) {
     <Slider {...settings}>
       {slides.map((item) => {
         return (
-          <div className="relative w-full h-full overflow-hidden psl-carousel__item">
+          <div className="relative w-full psl-carousel__item">
             <div className="right-img psl__img psl-img--right absolute right-1/2 left-auto z-[3] bottom-0 w-[430px] h-[330px] -mr-[590px]">
               <img
                 src={item.rightImgUrl}

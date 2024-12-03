@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
@@ -6,17 +7,12 @@ import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Section6 from "./Section6";
 import Section7 from "./Section7";
-import Section8 from "./Section8";
-import Section9 from "./Section9";
-import Section10 from "./Section10";
-import Section11 from "./Section11";
-import Section12 from "./Section12";
 
-export default function WebDevelopment() {
+export default function WordpressDevelopment() {
   return (
-    <div className="WebDevelopment">
+    <div className="WordpressDevelopment">
       <Helmet>
-        <title>Web Development & Designing - Mean3 Software Solutions</title>
+        <title>Wordpress Development - Mean3 Software Solutions</title>
       </Helmet>
       <Section1 />
       <Section2 />
@@ -25,11 +21,6 @@ export default function WebDevelopment() {
       <Section5 />
       <Section6 />
       <Section7 />
-      <Section8 />
-      <Section9 />
-      <Section10 />
-      <Section11 />
-      <Section12 />
     </div>
   );
 }

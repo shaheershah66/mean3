@@ -7,11 +7,12 @@ import Magento from "./pages/Magento";
 import BigCommerce from "./pages/BigCommerce";
 import WooCommerce from "./pages/WooCommerce";
 import WebDevelopment from "./pages/WebDevelopment";
+import WordpressDevelopment from "./pages/WordpressDevelopment";
 import Clients from "./pages/Clients";
 import Testimonial from "./pages/Testimonial";
+import Blogs from "./pages/Blogs";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-import Blogs from "./pages/Blogs";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/bigcommerce-development" element={<BigCommerce />} />
             <Route path="/woocommerce-development" element={<WooCommerce />} />
             <Route path="/web-development-designing" element={<WebDevelopment />} />
+            <Route path="/wordpress-development" element={<WordpressDevelopment />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/testimonial" element={<Testimonial />} />
             <Route path="/blogs" element={<Blogs />} />

@@ -1,10 +1,10 @@
-.slick-slide {
+#slider1 .slick-slide {
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform: translateY(100%);
   opacity: 0;
 }
 
-.slick-slide.slick-current {
+#slider1 .slick-slide.slick-current {
   transform: translateY(0px);
   opacity: 1;
 }
@@ -23,11 +23,11 @@
 .right-img,
 .left-img
 {
-    bottom:-5px
+    bottom:-10px
 }
 
 .middle-img{
-    bottom: -10px;
+    bottom: -15px;
 }
 
 .psl__img:hover {
@@ -40,22 +40,22 @@
   transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
 }
 
-.slick-slide.slick-current .middle-img {
+#slider1 .slick-slide.slick-current .middle-img {
   animation-delay: 0.2s; /* First */
 }
 
-.slick-slide.slick-current .right-img {
+#slider1 .slick-slide.slick-current .right-img {
   animation-delay: 0.4s; /* Second */
 }
 
-.slick-slide.slick-current .left-img {
+#slider1 .slick-slide.slick-current .left-img {
   animation-delay: 0.6s; /* Third */
 }
 
 /* Non-active slides reset */
-.slick-slide:not(.slick-current) .right-img,
-.slick-slide:not(.slick-current) .left-img,
-.slick-slide:not(.slick-current) .middle-img {
+#slider1 .slick-slide:not(.slick-current) .right-img,
+#slider1 .slick-slide:not(.slick-current) .left-img,
+#slider1 .slick-slide:not(.slick-current) .middle-img {
   animation: slideOut 0.5s ease forwards;
 }
 
@@ -164,6 +164,6 @@
   .psl-img--front:hover {
     width: 510px;
     margin-left: -255px;
-    bottom: -5px;
+    bottom: -10px;
   }
 }
