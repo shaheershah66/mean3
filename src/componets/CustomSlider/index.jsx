@@ -42,7 +42,7 @@ export default function CustomSlider({slides}) {
     dots: false,
     infinite: true,
     fade: true,
-    autoplay: false,
+    autoplay: true,
     speed: 1000,
     autoplaySpeed: 3000,
     slidesToShow: 1,

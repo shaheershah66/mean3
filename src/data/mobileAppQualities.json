@@ -1,0 +1,25 @@
+[
+    {
+        "imgUrl": "assets/clock-mobile-app.jpg",
+        "title": "on time",
+        "text": "We meet your requirements with responsive customer service and on-time delivery."
+    },
+
+    {
+        "imgUrl": "assets/cost-mobile-app.jpg",
+        "title": "cost effective",
+        "text": "We source our work overseas to get the best possible prices for high-quality development and design."
+    },
+
+    {
+        "imgUrl": "assets/bulb-mobile-app.jpg",
+        "title": "innovative solutions",
+        "text": "We are creative thinkers who can deliver unique solutions for uncommon challenges."
+    },
+
+    {
+        "imgUrl": "assets/technical-mobile-app.png",
+        "title": "technical savvy",
+        "text": "We are technology-driven and thrive on learning how to bring faster and easier solutions to our clients."
+    }
+]

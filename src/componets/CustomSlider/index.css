@@ -14,9 +14,9 @@
 .left-img,
 .middle-img {
   animation: slideIn 0.5s ease forwards;
-  opacity: 1; /* Start with hidden images */
+  opacity: 0; /* Start with hidden images */
   transform: translateY(100%); /* Start from below */
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 30px rgba(0,0,0,.4);
   transition: all 0.3s cubic-bezier(0.68, 0, 0.265, 1);
 }
 
